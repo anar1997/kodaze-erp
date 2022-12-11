@@ -1,0 +1,107 @@
+.human-add {
+  background-color: #24619a;
+  color: #ffffff;
+  border-radius: 50px;
+  border: none;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.div-human-add {
+  margin-left: 80px !important;
+  margin-top: 40px !important;
+}
+
+.human-add:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.human-card-col {
+  margin-left: 25px !important;
+}
+
+.human-card-row {
+  margin-left: 50px !important;
+  margin-top: 25px;
+}
+
+.human-search {
+  background-color: #ffffff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 200px !important;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  float: right;
+}
+
+
+.human-search h3 {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px !important;
+}
+
+.human-resources {
+  margin: 0 !important;
+}
+
+.check-hold {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+}
+
+.search-personal{
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+  background: url("https://static.thenounproject.com/png/101791-200.png")
+    no-repeat right;
+  background-size: 20px;
+  border: none;
+  border-bottom: 1px solid #b4b4b4;  
+}
+
+.search-personal:focus{
+  outline: none;
+}
+
+.search-select{
+  border: none;
+  border-bottom: 1px solid #b4b4b4;  
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+  background-size: 20px;
+  margin-top: 15px !important;
+}
+
+.search-select:focus{
+  outline: none;
+}
+
+
+.search-delete{
+  display: flex;
+  justify-content: end;
+  margin-right: 20px !important;
+  margin-top: 20px !important;
+}
+
+.delete-button{
+  border-radius: 50px;
+  border: none;
+  background-color: #EFBF3A;
+  color: #ffffff;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+  display: flex;
+  justify-content: end;
+}

@@ -1,0 +1,113 @@
+.human-table {
+  border: 1px solid #e0e0e0;
+  border-collapse: collapse;
+  /* max-width: 580px !important; */
+  margin-left: 40px !important;
+  margin-top: 50px !important;
+}
+
+.human-table th {
+  border: 1px solid #e0e0e0;
+  border-collapse: collapse;
+  padding: 5px !important;
+}
+
+.human-table td {
+  border: 1px solid #e0e0e0;
+  border-collapse: collapse;
+  padding: 5px !important;
+}
+
+.human-cell {
+  width: 110px !important;
+  height: 30px !important;
+}
+
+.human-cell-2 {
+  width: 90px !important;
+}
+
+.human-cell-3 {
+  width: 80px !important;
+}
+
+.human-cell-4 {
+  width: 100px !important;
+}
+
+.human-cell-6 {
+  width: 60px !important;
+}
+
+.human-cell-7 {
+  width: 80px !important;
+}
+
+.human-cell-8 {
+  width: 70px !important;
+}
+
+.human-cell-9 {
+  width: 80px !important;
+}
+
+.human-cell-5a {
+  text-align: center;
+}
+.human-check {
+}
+
+/* ***************************************** */
+
+.humantable-button {
+    margin-left: 40px !important;
+    margin-top: 20px !important;
+}
+
+.humantable-button-1 {
+  background-color: #24619a;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 40px;
+  padding: center !important;
+  width: 128px;
+  height: 40px;
+  border: none;
+  padding-bottom: 2px !important;
+  margin-right: 20px !important;
+}
+
+.humantable-button-1:hover {
+  color: white;
+  cursor: pointer;
+}
+.humantable-button-2 {
+  background-color: #98B0C7;
+  color: white;
+  border-radius: 40px;
+  padding: center !important;
+  width: 122px;
+  height: 40px;
+  border: none;
+  padding-bottom: 2px !important;
+  margin-right: 20px !important;
+}
+
+.humantable-link-1{
+    color: white;
+}
+
+.humantable-link-1:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.humantable-link-2{
+    color: white;
+}
+
+.humantable-link-2:hover{
+    color: white;
+    cursor: pointer;
+}

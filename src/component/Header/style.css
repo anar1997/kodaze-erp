@@ -1,0 +1,42 @@
+.header-dropdown-name {
+    display: inline-block;
+    /* padding-bottom: 5px !important; */
+    margin-right: 2px !important;
+    margin-bottom: 15px !important;
+  }
+  
+  .header-dropdown-img {
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    margin-bottom: 5px !important;
+    margin-right: 5px !important;
+  }
+
+  .header-dropdown{
+    display: flex;
+    align-items: center;
+  }
+
+  .header-reload{
+    color: #335a7e;
+    margin-right: 5px !important;
+  }
+
+  .IoReload{
+    color: #335a7e;
+  }
+
+  .header-right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .header-name{
+    display: flex;
+    align-items: center;    
+    color: #073763;
+}
+
+  

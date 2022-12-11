@@ -1,0 +1,67 @@
+.commissions-button{
+    background-color: #24619a;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 40px;
+    padding: center !important;
+    width: 161px;
+    height: 40px;
+    border: none;
+    padding-bottom: 2px !important;
+    margin-right: 20px !important;
+    margin-top: 30px !important;
+    margin-left: 50px !important;
+}
+
+.commissions-button:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.commissions-button-link{
+    color: white;
+}
+
+.commissions-table{
+    border: 1px solid #e0e0e0;
+    border-collapse: collapse;
+    margin-left: 50px !important;
+    margin-top: 30px !important;
+}
+
+.commissions-table th {
+    border: 1px solid #e0e0e0;
+    border-collapse: collapse;
+    padding-left: 15px !important;
+    /* padding: 5px !important; */
+  }
+  
+  .commissions-table-td {
+    border: 1px solid #e0e0e0;
+    border-collapse: collapse;
+    padding-left: 15px !important;
+  }
+
+  .commissions-cell{
+    width: 290px !important;
+    text-align: start;
+    border: 1px solid #e0e0e0;
+    border-collapse: collapse;
+    padding-left: 15px !important;
+  }
+
+  .commissions-cell-2{
+    width: 40px !important;
+    height: 35px !important;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    border-collapse: collapse;
+  }
+
+  .commissions-icon{
+    /* text-align: center; */
+    color: #073763;
+    width: 20px !important;
+    height: 20px !important;
+  }

@@ -1,0 +1,235 @@
+.account-hesab-div {
+    height: 100%;
+  }
+
+  .account-left-header label {
+    margin-left: 20px !important;
+  }
+  
+  .account-left-header input {
+    border: none;
+    border-bottom: 2px solid #d7d7d7;
+    width: 200px;
+  }
+  
+  .account-left-header input:focus {
+    outline: none;
+  }
+  
+
+  .account-hesab {
+    /* width: 190px; */
+    margin-top: 20px !important;
+    /* border-bottom: 1px solid; */
+    /* border-bottom-width: 100px; */
+    /* padding-bottom: -200px; */
+    margin-left: 20px !important;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .account-hesab-icon {
+    font-size: 30px;
+    /* padding-top: 10px; */
+    margin-top: 15px !important;
+    margin-right: 20px !important;
+  }
+  
+  .account-hesab p {
+    padding-top: 10px !important;
+    font-weight: bold;
+  }
+
+  .account-bottom-line {  
+    margin-left: 20px !important;
+    width: 81%;
+    height: 2px;
+    /* border: 10px; */
+    /* height: 12px; */
+    /* font-size: 10px; */
+    color: #000000;
+    background-color: #000000;
+    border: none;
+    margin-bottom: 25px !important;
+  }
+
+  
+.account-proqram-parametr {
+    width: 86%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px !important;
+  }
+
+  /* --------------------------------- */
+
+  .account-left-bottom-header label {
+    margin-left: 20px !important;
+  }
+  
+  .account-left-bottom-header input {
+    border: none;
+    border-bottom: 2px solid #d7d7d7;
+    width: 198px;
+  }
+  
+  .account-left-bottom-header input:focus {
+    outline: none;
+  }
+
+/* ---------------------------- */
+  .account-password-col p {
+    padding-top: 10px !important;
+    font-weight: bold;
+    margin-right: 30px !important;
+  }
+  
+  .account-password-col-icon {
+    font-size: 28px;
+    margin-top: 15px !important;
+    margin-right: 20px !important;
+  }
+  
+  .account-password-col {
+    width: 190px;
+    margin-top: 20px !important;
+    margin-left: 20px !important;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+
+  /* ********************* */
+
+  .account-left-header label {
+    margin-left: 20px !important;
+  }
+  
+  .account-left-header input {
+    border: none;
+    border-bottom: 2px solid #d7d7d7;
+    width: 200px;
+  }
+  
+  .account-left-header input:focus {
+    outline: none;
+  }
+
+
+  /* ***************** */
+
+  .account-middle-header label {
+    margin-left: 20px !important;
+    margin-top: 3px !important;
+  }
+
+/* ---------------------------------- */
+
+  .account-settings {
+    margin-top: 30px !important;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .account-settings-icon {
+    font-size: 28px;
+    margin-left: 20px !important;
+    margin-top: 8px !important;
+    margin-right: 20px !important;
+  }
+  
+  .account-settings p {
+    font-weight: bold;
+  }
+
+
+  .account-id-card {
+    display: inline-block;
+    background-color: #24619a;
+    color: #f2fbfe;
+    border: none;
+    border-radius: 5px;
+    height: 6px;
+    font-size: 15px;
+    width: 90px;
+    text-align: center;
+    padding-bottom: 15px !important;
+    padding-top: -10px !important;
+    text-decoration: none;
+  }
+  
+  .account-id-card:hover {
+    color: #f2fbfe;
+    cursor: pointer;
+  }
+
+
+  /* *********************** */
+
+  .account-profile-pic {
+    max-width: 180px;
+    max-height: 180px;
+    display: block;
+  }
+
+  .account-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .account-i-img {
+    margin-top: -30px !important;
+  }
+
+
+  .account-p-image {
+    position: absolute;
+    /* top: 167px; */
+    /* right: 30px; */
+    color: #666666;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .account-p-image:hover {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+
+  .account-i-pencil {
+    margin-left: 130px !important;
+    font-size: 22px;
+    color: #c0c0c0;
+  }
+
+  .account-upload-button {
+    font-size: 1.2em;
+  }
+  
+  .account-upload-button:hover {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: #999;
+  }
+
+  .account-file-upload {
+    display: none;
+  }
+
+
+  .account-look{
+    display: flex;
+
+  }
+
+  .i-pencil{
+     color: #073763;
+     font-size: 18px !important;
+     margin-top: 2px !important; 
+     margin-left: 5px !important; 
+    }
+
+  .i-trash{
+    color: #073763;
+    font-size: 18px !important;
+    margin-left: -5px !important;
+}
+
+  

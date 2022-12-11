@@ -1,0 +1,83 @@
+.permission-add {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 500px !important;
+    height: 600px !important;
+    margin-left: 50px !important;
+    margin-top: 50px !important;
+  }
+  
+  .permission-arrow {
+    font-size: 40px !important;
+    color: #073763;
+  }
+  
+  .permission-h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px !important;
+  }
+  
+  .permission-checking {
+    width: 90px !important;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 80px !important;
+    /* margin-right: 20px !important; */
+  }
+  
+  .permission-uni-select {
+    border: none;
+    border-bottom: 1px solid #e6e6e6;
+    width: 180px;
+  }
+  
+  .permission-proqram-parametr {
+    width: 260px !important;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px !important;
+    margin-left: 80px !important;
+  }
+  
+  .permission-proqram-parametr label {
+    font-weight: bold;
+    font-size: 15px;
+  }
+  
+  .permission-delete{
+      margin-top: 70px !important;
+      display: flex;
+      justify-content: flex-end;
+  }
+  
+  .permission-button{
+      border-radius: 50px;
+      border: none;
+      background-color: #EFBF3A;
+      color: #ffffff;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      padding-top: 7px !important;
+      padding-bottom: 7px !important;
+      margin-right: 15px !important;
+  }
+  
+  .permission-button-2{
+      border-radius: 50px;
+      border: none;
+      background-color: #21D25C;
+      color: #ffffff;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      padding-top: 7px !important;
+      padding-bottom: 7px !important;
+      margin-right: 15px !important;
+  }
+  

@@ -1,0 +1,343 @@
+/* 
+.commission-add {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 450px !important;
+  margin-left: 50px !important;
+  margin-top: 50px !important;
+}
+
+.commission-type {
+  display: flex;
+  justify-content: center;
+}
+
+.commission-add-name {
+  border: none;
+  border-bottom: 2px solid #e6e6e6;
+  width: 220px !important;
+  margin-left: 50px !important;
+}
+
+.commission-add-name:focus {
+  outline: none;
+}
+
+.for-office {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 120px !important;
+}
+
+.for-office label {
+  font-size: 13px !important;
+  font-weight: bold;
+}
+
+.for-office-input {
+  border: none;
+  border-bottom: 2px solid #e6e6e6;
+  width: 70px !important;
+}
+
+.for-office-input:focus {
+  outline: none;
+}
+
+.for-office-2 {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 120px !important;
+}
+
+.for-office-2 label {
+  font-size: 13px !important;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.credit-range-h5{
+  margin-left: 90px !important;
+}
+
+.credit-range {
+  display: flex;
+  justify-content: space-between;
+  width: 180px !important;
+  margin-left: 90px !important;
+}
+
+.commission-add-select {
+  border: none;
+  border-bottom: 2px solid #e6e6e6;
+  width: 80px;
+}
+
+.commission-add-select:focus {
+  outline: none;
+}
+
+.credit-range-2-h5{
+    margin-left: 70px !important;
+}
+
+.credit-range-2 {
+  display: flex;
+  justify-content: space-between;
+  width: 270px !important;
+  margin-left: 90px !important;
+}
+
+
+.for-office-3 {
+  width: 190px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 75px !important;
+  margin-top: 50px !important;
+}
+
+.for-office-3 label {
+  font-size: 13px !important;
+  font-weight: bold;
+}
+
+.for-office-4 {
+  width: 190px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 75px !important;
+}
+
+.for-office-4 label {
+  font-size: 13px !important;
+  font-weight: bold;
+}
+
+
+.commissions-add-button{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px !important;
+}
+
+.month-add{
+    background-color: #21D25C;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 40px;
+    padding: center !important;
+    width: 138px;
+    height: 30px;
+    border: none;
+    padding-bottom: 2px !important;
+    margin-right: 20px !important;
+    margin-top: 30px !important;
+    margin-left: 50px !important;
+}
+
+.sale-add{
+    background-color: #21D25C;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 40px;
+    padding: center !important;
+    width: 128px;
+    height: 30px;
+    border: none;
+    padding-bottom: 2px !important;
+    margin-right: 20px !important;
+    margin-top: 30px !important;
+} */
+
+
+
+
+/* ikinci dizayn:  */
+
+
+
+
+
+.commission-add {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 600px !important;
+    height: 870px !important;
+    margin-left: 50px !important;
+    margin-top: 50px !important;
+  }
+  
+  .commission-type {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px !important;
+  }
+  
+  .commission-add-name {
+    border: none;
+    border-bottom: 2px solid #e6e6e6;
+    width: 300px !important;
+    margin-left: 70px !important;
+    margin-top: 40px !important;
+  }
+  
+  .commission-add-name:focus {
+    outline: none;
+  }
+  
+  .for-office {
+    width: 220px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 150px !important;
+    margin-top: 20px !important;
+  }
+  
+  .for-office label {
+    font-size: 16px !important;
+    font-weight: bold;
+  }
+  
+  .for-office-input {
+    border: none;
+    border-bottom: 2px solid #e6e6e6;
+    width: 110px !important;
+  }
+  
+  .for-office-input:focus {
+    outline: none;
+  }
+  
+  .for-office-2 {
+    width: 185px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 185px !important;
+    margin-top: 20px !important;
+  }
+  
+  .for-office-2 label {
+    font-size: 16px !important;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .credit-range-h5{
+    margin-left: 125px !important;
+    margin-top: 40px !important;
+  }
+  
+  .credit-range {
+    display: flex;
+    justify-content: space-between;
+    width: 250px !important;
+    margin-left: 120px !important;
+    margin-top: 10px !important;
+  }
+  
+  .commission-add-select {
+    border: none;
+    border-bottom: 2px solid #e6e6e6;
+    width: 110px;
+  }
+  
+  .commission-add-select:focus {
+    outline: none;
+  }
+  
+  .credit-range-2-h5{
+      margin-left: 100px !important;
+      margin-top: 40px !important;
+  }
+  
+  .credit-range-2 {
+    display: flex;
+    justify-content: space-between;
+    width: 400px !important;
+    margin-left: 115px !important;
+    margin-top: 20px !important;
+  }
+  
+  
+  .for-office-3 {
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 98px !important;
+    margin-top: 50px !important;
+  }
+  
+  .for-office-3 label {
+    font-size: 16px !important;
+    font-weight: bold;
+  }
+  
+  .for-office-4 {
+    width: 205px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 162px !important;
+    margin-top: 20px !important;
+  }
+  
+  .for-office-4 label {
+    font-size: 16px !important;
+    font-weight: bold;
+  }
+  
+  
+  .commissions-add-button{
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 60px !important;
+  }
+  
+  .month-add{
+      background-color: #21D25C;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 40px;
+      padding: center !important;
+      width: 168px;
+      height: 40px;
+      border: none;
+      padding-bottom: 2px !important;
+      margin-right: 20px !important;
+      margin-top: 30px !important;
+      margin-left: 50px !important;
+  }
+  
+  .sale-add{
+      background-color: #21D25C;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 40px;
+      padding: center !important;
+      width: 155px;
+      height: 40px;
+      border: none;
+      padding-bottom: 2px !important;
+      margin-right: 20px !important;
+      margin-top: 30px !important;
+  }
