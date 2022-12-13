@@ -10,20 +10,24 @@ import WorkerDetail from "./component/WorkerDetail";
 import HumanTable from "./component/HumanTable";
 import CommissionAdd from "./component/CommissionAdd";
 import LoginPage from "./page/Login";
+import store from "./redux/store";
+import { Provider } from "react-redux";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Main />
-      {/* <WorkerAdd /> */}
-      {/* <AccountSettings /> */}
-      {/* <WorkerDetail/> */}
-      {/* <HumanTable/> */}
-      {/* <CommissionAdd/> */}
-      {/* <LoginPage /> */}
-    </BrowserRouter>
-  </React.StrictMode>
+  // <React.StrictMode>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Main />
+        {/* <WorkerAdd /> */}
+        {/* <AccountSettings /> */}
+        {/* <WorkerDetail/> */}
+        {/* <HumanTable/> */}
+        {/* <CommissionAdd/> */}
+        {/* <LoginPage /> */}
+      </BrowserRouter>
+    </Provider>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
