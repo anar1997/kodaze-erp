@@ -4,7 +4,18 @@ import { Link } from "react-router-dom";
 import PageArea from "../Area";
 import PageHeader from "../Header";
 import "./style.css";
+import { useSelector, useDispatch } from "react-redux";
+import { getWorkGraphicAsync } from "../../redux/slices/humanResourcesSlices/workGraphicSlice";
+import { useEffect } from "react";
+
 const HumanTable = () => {
+  const dispatch = useDispatch();
+  let data = useSelector((state) => state.workGraphic.data);
+
+  useEffect(() => {
+    dispatch(getWorkGraphicAsync());
+  }, [dispatch]);
+
   return (
     <div>
       <PageHeader name="İnsan resursları/İş qrafiki" />
@@ -37,166 +48,33 @@ const HumanTable = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td className="human-check">
-                  <input type="checkbox" />
-                </td>
-                <td>1</td>
-                <td className="human-cell">Loren Kris</td>
-                <td>Magnus</td>
-                <td>Bakı</td>
-                <td>Mühasib</td>
-                <td className="human-cell-5a">46</td>
-                <td className="human-cell-5a">400</td>
-                <td className="human-cell-5a">500</td>
-                <td className="human-cell-5a">1</td>
-                <td className="human-cell-5a">2</td>
-              </tr>
-              <tr>
-                <td className="human-check">
-                  <input type="checkbox" />
-                </td>
-                <td>2</td>
-                <td className="human-cell">Loren Kris</td>
-                <td>Magnus</td>
-                <td>Bakı</td>
-                <td>Mühasib</td>
-                <td className="human-cell-5a">46</td>
-                <td className="human-cell-5a">400</td>
-                <td className="human-cell-5a">500</td>
-                <td className="human-cell-5a">1</td>
-                <td className="human-cell-5a">2</td>
-              </tr>
-              <tr>
-                <td className="human-check">
-                  <input type="checkbox" />
-                </td>
-                <td>3</td>
-                <td className="human-cell">Loren Kris</td>
-                <td>Magnus</td>
-                <td>Bakı</td>
-                <td>Mühasib</td>
-                <td className="human-cell-5a">46</td>
-                <td className="human-cell-5a">400</td>
-                <td className="human-cell-5a">500</td>
-                <td className="human-cell-5a">1</td>
-                <td className="human-cell-5a">2</td>
-              </tr>
-              <tr>
-                <td className="human-check">
-                  <input type="checkbox" />
-                </td>
-                <td>4</td>
-                <td className="human-cell">Loren Kris</td>
-                <td>Magnus</td>
-                <td>Bakı</td>
-                <td>Mühasib</td>
-                <td className="human-cell-5a">46</td>
-                <td className="human-cell-5a">400</td>
-                <td className="human-cell-5a">500</td>
-                <td className="human-cell-5a">1</td>
-                <td className="human-cell-5a">2</td>
-              </tr>
-              <tr>
-                <td className="human-check">
-                  <input type="checkbox" />
-                </td>
-                <td>5</td>
-                <td className="human-cell">Loren Kris</td>
-                <td>Magnus</td>
-                <td>Bakı</td>
-                <td>Mühasib</td>
-                <td className="human-cell-5a">46</td>
-                <td className="human-cell-5a">400</td>
-                <td className="human-cell-5a">500</td>
-                <td className="human-cell-5a">1</td>
-                <td className="human-cell-5a">2</td>
-              </tr>
-              <tr>
-                <td className="human-check">
-                  <input type="checkbox" />
-                </td>
-                <td>6</td>
-                <td className="human-cell">Loren Kris</td>
-                <td>Magnus</td>
-                <td>Bakı</td>
-                <td>Mühasib</td>
-                <td className="human-cell-5a">46</td>
-                <td className="human-cell-5a">400</td>
-                <td className="human-cell-5a">500</td>
-                <td className="human-cell-5a">1</td>
-                <td className="human-cell-5a">2</td>
-              </tr>
-              <tr>
-                <td className="human-check">
-                  <input type="checkbox" />
-                </td>
-                <td>7</td>
-                <td className="human-cell">Loren Kris</td>
-                <td>Magnus</td>
-                <td>Bakı</td>
-                <td>Mühasib</td>
-                <td className="human-cell-5a">46</td>
-                <td className="human-cell-5a">400</td>
-                <td className="human-cell-5a">500</td>
-                <td className="human-cell-5a">1</td>
-                <td className="human-cell-5a">2</td>
-              </tr>
-              <tr>
-                <td className="human-check">
-                  <input type="checkbox" />
-                </td>
-                <td>8</td>
-                <td className="human-cell">Loren Kris</td>
-                <td>Magnus</td>
-                <td>Bakı</td>
-                <td>Mühasib</td>
-                <td className="human-cell-5a">46</td>
-                <td className="human-cell-5a">400</td>
-                <td className="human-cell-5a">500</td>
-                <td className="human-cell-5a">1</td>
-                <td className="human-cell-5a">2</td>
-              </tr>
-              <tr>
-                <td className="human-check">
-                  <input type="checkbox" />
-                </td>
-                <td>9</td>
-                <td className="human-cell">Loren Kris</td>
-                <td>Magnus</td>
-                <td>Bakı</td>
-                <td>Mühasib</td>
-                <td className="human-cell-5a">46</td>
-                <td className="human-cell-5a">400</td>
-                <td className="human-cell-5a">500</td>
-                <td className="human-cell-5a">1</td>
-                <td className="human-cell-5a">2</td>
-              </tr>
-              <tr>
-                <td className="human-check">
-                  <input type="checkbox" />
-                </td>
-                <td>10</td>
-                <td className="human-cell">Loren Kris</td>
-                <td>Magnus</td>
-                <td>Bakı</td>
-                <td>Mühasib</td>
-                <td className="human-cell-5a">46</td>
-                <td className="human-cell-5a">400</td>
-                <td className="human-cell-5a">500</td>
-                <td className="human-cell-5a">1</td>
-                <td className="human-cell-5a">2</td>
-              </tr>
+              {data.map((v, i) => (
+                <tr key={"working_day"+v.id}>
+                  <td className="human-check">
+                    <input type="checkbox" />
+                  </td>
+                  <td>{i+1}</td>
+                  <td className="human-cell">{v.employee.fullname}</td>
+                  <td>{v.employee.company ? (v.employee.company.name) : ("")}</td>
+                  <td>{v.employee.office ? (v.employee.office.name) : ("")}</td>
+                  <td>{v.employee.position ? (v.employee.position.name) : ("")}</td>
+                  <td className="human-cell-5a">{v.working_days_count}</td>
+                  <td className="human-cell-5a">{v.employee.salary}</td>
+                  <td className="human-cell-5a">{v.extra_data.total_holiday}</td>
+                  <td className="human-cell-5a">{v.extra_data.total_payed_days_off}</td>
+                  <td className="human-cell-5a">{v.extra_data.total_unpayed_days_off}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
 
           <div className="humantable-button">
-            <button className="humantable-button-1">
-              <Link className="humantable-link-1" to="holiday-add">Tətil əlavə et</Link>
-            </button>
-            <button className="humantable-button-2">
-                <Link className="humantable-link-2" to="permission-add">İcazə əlavə et</Link>
-            </button>
+              <Link className="humantable-button-1" to="holiday-add">
+                Tətil əlavə et
+              </Link>
+              <Link className="humantable-button-1" to="permission-add">
+                İcazə əlavə et
+              </Link>
           </div>
         </Col>
 

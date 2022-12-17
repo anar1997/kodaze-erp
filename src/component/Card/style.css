@@ -7,6 +7,8 @@
     border-radius: 5px;
     margin-bottom: 20px !important;
     cursor: pointer;
+    max-width: 450px;
+    max-height: 150px;
 }
 
 .human-img {
@@ -17,9 +19,11 @@
 }
 
 .human-card-title {
-    font-size: 16px;
+    font-size: 16px !important;
     margin-top: 0;
+    font-weight: bold;
     margin-bottom: 5px;
+
 }
 
 .human-card-1 p {

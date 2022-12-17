@@ -4,8 +4,18 @@ import { Link } from "react-router-dom";
 import PageArea from "../Area";
 import PageHeader from "../Header";
 import "./style.css";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { getCommissionAsync } from "../../redux/slices/humanResourcesSlices/commissionSlice";
 
 const Commisions = () => {
+  const dispatch = useDispatch();
+  let data = useSelector((state) => state.commission.data);
+
+  useEffect(() => {
+    dispatch(getCommissionAsync());
+  }, [dispatch]);
+
   return (
     <div>
       <PageHeader name="İnsan resursları/İş qrafiki" />
@@ -29,30 +39,20 @@ const Commisions = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
+          {/* <tr>
             <td className="commissions-cell">Office Leader</td>
             <td className="commissions-cell-2">
               <IoPencil className="commissions-icon" />
             </td>
-          </tr>
-          <tr>
-            <td className="commissions-cell">Van leader</td>
-            <td className="commissions-cell-2">
-              <IoPencil className="commissions-icon" />
-            </td>
-          </tr>
-          <tr>
-            <td className="commissions-cell">Dealer</td>
-            <td className="commissions-cell-2">
-              <IoPencil className="commissions-icon" />
-            </td>
-          </tr>
-          <tr>
-            <td className="commissions-cell">Canvasser</td>
-            <td className="commissions-cell-2">
-              <IoPencil className="commissions-icon" />
-            </td>
-          </tr>
+          </tr> */}
+          {data.map((v, i) => (
+            <tr key={"commisson_name"+v.id}>
+              <td className="commissions-cell">{v.commission_name}</td>
+              <td className="commissions-cell-2">
+                <IoPencil className="commissions-icon" />
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

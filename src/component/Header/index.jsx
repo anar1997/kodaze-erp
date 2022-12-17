@@ -10,7 +10,7 @@ import "./style.css";
 
 const PageHeader = (heading) => {
   return (
-    <div className="header-flex"  style={{ background: "red" }}>
+    <div className="header-flex">
       <Row>
         <Col span={10}></Col>
         <Col span={8} className="header-name">

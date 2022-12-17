@@ -275,3 +275,15 @@
           .worker-confirm label{
             color: #4F76E4;
           }
+
+          .error{
+            color: red;
+            margin-top: -20px !important;
+            font-size: 10px !important;
+          }
+
+          .signature{
+            border: 1px solid black;
+            width: 350px !important;
+            height: 100px !important;
+          }

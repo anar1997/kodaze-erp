@@ -8,19 +8,18 @@ import man from "./man.jfif";
 import { Col, Divider, Row } from "antd";
 import HumanCard from "../../component/Card";
 import { useSelector, useDispatch } from "react-redux";
-import { usersAsync } from "../../redux/user/userSlice";
+import { getUsersAsync } from "../../redux/slices/humanResourcesSlices/userSlice";
 
 const HumanResources = () => {
-  let [userIns, setUserIns] = useState([])
   const dispatch = useDispatch();
-  let userData = useSelector((state) => state.userData);
-  console.log("ilkin user data => "+userData);
+  let userData = useSelector((state) => state.users.users);
+
 
   useEffect(() => {
-    dispatch(usersAsync());
-    setUserIns(userData)
-    console.log("User 1 fullname" + userData)
+    dispatch(getUsersAsync());
   }, []);
+
+
   return (
     <div>
       <PageHeader name="Insan Resursları" />
@@ -41,11 +40,11 @@ const HumanResources = () => {
           </div>
 
           <Row className="human-card-row">
-            {/* {userIns.map((user, index) => {
-              <Col key={"user"+index} className="human-card-col gutter-row">
-                <HumanCard name="salam" company={user.company} position={user.position} number={user.phone_number_1}/>
+            {userData.map((user, index) => (
+              <Col key={"user"+user.id} className="human-card-col gutter-row" span={6}>
+                <HumanCard profile_image={user.photo_ID} name={user.fullname} company={user.company ? (user.company.name) : ("")} position={user.position ? (user.position.name) : ("")} number={user.phone_number_1}/>
               </Col>
-            })} */}
+            ))}
           </Row>
         </Col>
 

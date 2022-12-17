@@ -13,10 +13,10 @@ const HumanCard = (props) => {
   }
   return (
     <div className="human-card-1" onClick={routeChange}>
-      <img className="human-img" src={man} alt="" />
+      <img className="human-img" src={props.profile_image} alt="" />
 
       <div className="human-detail">
-        <h6 className="human-card-title">{props.name}</h6>
+        <p className="human-card-title">{props.name}</p>
         <p>{props.company}</p>
         <p>{props.position}</p>
         <p>{props.number}</p>

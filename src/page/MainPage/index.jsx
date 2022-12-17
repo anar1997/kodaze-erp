@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Layout, Menu } from "antd";
 import "./style.css";
-import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, Outlet, useLocation } from "react-router-dom";
 import CRM from "../CRM";
 import FinanceAndInstallment from "../FinanceAndInstallment";
 import HomePage from "../HomePage";
@@ -27,6 +27,8 @@ import PermissionAdd from "../../component/PermissionAdd";
 const { Header, Content, Footer, Sider } = Layout;
 
 const Main = () => {
+  const location=useLocation();
+  let {pathname}=location;
   const [collapsed, setCollapsed] = useState(false);
   return (
     <Layout>
@@ -59,10 +61,10 @@ const Main = () => {
           style={{ backgroundColor: "#073763" }}
           theme="dark"
           mode="inline"
-          defaultSelectedKeys={["1"]}
+          defaultSelectedKeys={[pathname]}
           items={[
             {
-              key: "1",
+              key: "/",
               icon: <FaHome className={(collapsed ? "main-icon-closed":"main-icon")}/>,
               label: (
                 <Link className="main-link" to="/">
@@ -71,7 +73,7 @@ const Main = () => {
               ),
             },
             {
-              key: "2",
+              key: "/human-resources",
               icon: <IoPeopleCircleOutline className={(collapsed ? "main-icon-closed":"main-icon")}/>,
               label: (
                 <Link className="main-link" to="/human-resources">
@@ -80,7 +82,7 @@ const Main = () => {
               ),
             },
             {
-              key: "3",
+              key: "/crm",
               icon: <IoBookmarks className={(collapsed ? "main-icon-closed":"main-icon")}/>,
               label: (
                 <Link className="main-link" to="/crm">
@@ -89,7 +91,7 @@ const Main = () => {
               ),
             },
             {
-              key: "4",
+              key: "/finance-and-installment",
               icon: <IoCalculatorOutline className={(collapsed ? "main-icon-closed":"main-icon")}/>,
               label: (
                 <Link className="main-link" to="/finance-and-installment">
@@ -98,7 +100,7 @@ const Main = () => {
               ),
             },
             {
-              key: "5",
+              key: "/warehouse",
               icon: <FaWarehouse className={(collapsed ? "main-icon-closed":"main-icon")}/>,
               label: (
                 <Link className="main-link" to="/warehouse">
@@ -107,7 +109,7 @@ const Main = () => {
               ),
             },
             {
-              key: "6",
+              key: "/statistics",
               icon: <IoCellularSharp className={(collapsed ? "main-icon-closed":"main-icon")}/>,
               label: (
                 <Link className="main-link" to="/statistics">
@@ -116,7 +118,7 @@ const Main = () => {
               ),
             },
             {
-              key: "7",
+              key: "/tasks",
               icon: <FaTasks className={(collapsed ? "main-icon-closed":"main-icon")}/>,
               label: (
                 <Link className="main-link" to="/tasks">
@@ -125,7 +127,7 @@ const Main = () => {
               ),
             },
             {
-              key: "8",
+              key: "/service",
               icon: <IoMdBuild className={(collapsed ? "main-icon-closed":"main-icon")}/>,
               label: (
                 <Link className="main-link" to="/service">
