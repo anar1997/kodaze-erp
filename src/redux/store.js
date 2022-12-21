@@ -2,6 +2,8 @@ import { configureStore } from "@reduxjs/toolkit";
 import  commissionSlice  from "./slices/humanResourcesSlices/commissionSlice";
 import companySlice from "./slices/humanResourcesSlices/companySlice";
 import departamentSlice from "./slices/humanResourcesSlices/departamentSlice";
+import holidaySlice from "./slices/humanResourcesSlices/holidaySlice";
+import monthRangeSlice from "./slices/humanResourcesSlices/monthRangeSlice";
 import officeSlice from "./slices/humanResourcesSlices/officeSlice";
 import positionSlice from "./slices/humanResourcesSlices/positionSlice";
 import regionSlice from "./slices/humanResourcesSlices/regionSlice";
@@ -19,5 +21,7 @@ export default configureStore({
         office: officeSlice,
         position: positionSlice,
         region: regionSlice,
+        monthRange: monthRangeSlice,
+        holiday: holidaySlice,
     }
 })

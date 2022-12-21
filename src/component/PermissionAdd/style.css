@@ -7,7 +7,7 @@
     box-sizing: border-box;
     border-radius: 15px;
     cursor: pointer;
-    width: 500px !important;
+    width: 480px !important;
     height: 600px !important;
     margin-left: 50px !important;
     margin-top: 50px !important;
@@ -28,7 +28,7 @@
     width: 90px !important;
     display: flex;
     justify-content: space-between;
-    margin-left: 80px !important;
+    margin-left: 120px !important;
     /* margin-right: 20px !important; */
   }
   

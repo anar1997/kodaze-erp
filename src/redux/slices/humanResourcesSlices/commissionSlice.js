@@ -6,12 +6,17 @@ export const getCommissionAsync = createAsyncThunk('commissionAsync', async ()=>
     return res.data
 })
 
+export const postCommissionAsync = createAsyncThunk('postCommissionAsync', async (data)=>{
+    const res = await axios.post('salaries/commission/', data)
+    return res.data;
+})
+
 export const commissionSlice = createSlice({
     name: 'commission',
     initialState: {
         data: [],
         isLoading: false,
-        erroe: null
+        error: null
     }, 
     reducers: {},
     extraReducers: {
@@ -24,6 +29,16 @@ export const commissionSlice = createSlice({
             // console.log(action.payload.results);
         },
         [getCommissionAsync.rejected]: (state, action)=>{
+            console.log('xeta cixdi');
+        },
+        [postCommissionAsync.pending]: (state, action)=>{
+            state.isLoading = true
+        },
+        [postCommissionAsync.fulfilled]: (state, action)=>{
+            state.isLoading = false
+            console.log(state.payload);
+        },
+        [postCommissionAsync.rejected]: (state, action)=>{
             console.log('xeta cixdi');
         }
     }

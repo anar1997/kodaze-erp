@@ -1,5 +1,5 @@
 import { Col, Row } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import PageArea from "../Area";
 import PageHeader from "../Header";
@@ -11,6 +11,8 @@ import { useEffect } from "react";
 const HumanTable = () => {
   const dispatch = useDispatch();
   let data = useSelector((state) => state.workGraphic.data);
+
+  const [check, setCheck] = useState([])
 
   useEffect(() => {
     dispatch(getWorkGraphicAsync());
@@ -51,7 +53,7 @@ const HumanTable = () => {
               {data.map((v, i) => (
                 <tr key={"working_day"+v.id}>
                   <td className="human-check">
-                    <input type="checkbox" />
+                    <input onChange={()=>setCheck([...check, v.id])} type="checkbox" />
                   </td>
                   <td>{i+1}</td>
                   <td className="human-cell">{v.employee.fullname}</td>
@@ -72,7 +74,7 @@ const HumanTable = () => {
               <Link className="humantable-button-1" to="holiday-add">
                 Tətil əlavə et
               </Link>
-              <Link className="humantable-button-1" to="permission-add">
+              <Link className="humantable-button-1" to="permission-add"  state = {{from: check}}>
                 İcazə əlavə et
               </Link>
           </div>
