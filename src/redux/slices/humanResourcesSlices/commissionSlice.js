@@ -26,7 +26,6 @@ export const commissionSlice = createSlice({
         [getCommissionAsync.fulfilled]: (state, action)=>{
             state.isLoading = false
             state.data = action.payload.results
-            // console.log(action.payload.results);
         },
         [getCommissionAsync.rejected]: (state, action)=>{
             console.log('xeta cixdi');

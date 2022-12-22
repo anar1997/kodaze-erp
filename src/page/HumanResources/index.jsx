@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import PageArea from "../../component/Area";
 import PageHeader from "../../component/Header";
 import "./style.css";
-import { IoPencil, IoTrash, IoCloseCircle } from "react-icons/io5";
-import man from "./man.jfif";
-import { Col, Divider, Row } from "antd";
+import { Col, Row } from "antd";
 import HumanCard from "../../component/Card";
 import { useSelector, useDispatch } from "react-redux";
 import { getUsersAsync } from "../../redux/slices/humanResourcesSlices/userSlice";
@@ -17,7 +15,7 @@ const HumanResources = () => {
 
   useEffect(() => {
     dispatch(getUsersAsync());
-  }, []);
+  }, [dispatch]);
 
 
   return (

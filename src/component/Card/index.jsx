@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./style.css";
-import man from "./man.jfif";
 import { IoPencil, IoTrash } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
 

@@ -27,19 +27,19 @@ const HolidayAdd = () => {
       .required("Tarix mütləq daxil edilməlidir!"),
     holding: yup.boolean(),
     office_id: yup.number().when("holding", (holding, schema) => {
-      return holding == true
+      return holding === true
         ? schema
         : schema.required("bu xana boş ola bilməz");
     }),
     company_id: yup.number().when("holding", (holding, schema) => {
-      return holding == true
+      return holding === true
         ? schema
         : schema.required("bu xana boş ola bilməz");
     }),
   });
 
   const handleChange = (e) => {
-    e.map((v, i) => {
+    e.forEach((v, i) => {
       console.log(v.id);
       setSelectedOption([...selectedOption, v.id]);
       console.log(selectedOption);
@@ -66,7 +66,7 @@ const HolidayAdd = () => {
     onSubmit: (values) => {
       values.person_on_duty_id = selectedOption;
       let dateList = [];
-      values.holiday_date.map((v) => {
+      values.holiday_date.forEach((v) => {
         let a = `${v.day}-${v.month.number}-${v.year}`;
         dateList.push(a);
       });

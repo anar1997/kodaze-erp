@@ -4,7 +4,7 @@ import PageHeader from "../Header";
 import { Col, Row } from "antd";
 import { Link } from "react-router-dom";
 import profile from "./man.jfif";
-import { IoAddCircle, IoPencil, IoTrash } from "react-icons/io5";
+import { IoPencil, IoTrash } from "react-icons/io5";
 import "./style.css";
 
 const WorkerDetail = () => {

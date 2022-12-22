@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Layout, Menu } from "antd";
 import "./style.css";
-import { BrowserRouter, Routes, Route, Link, Outlet, useLocation } from "react-router-dom";
+import { Routes, Route, Link, Outlet, useLocation } from "react-router-dom";
 import CRM from "../CRM";
 import FinanceAndInstallment from "../FinanceAndInstallment";
 import HomePage from "../HomePage";
@@ -24,7 +24,7 @@ import CommissionAdd from "../../component/CommissionAdd";
 import HolidayAdd from "../../component/HolidayAdd";
 import PermissionAdd from "../../component/PermissionAdd";
 
-const { Header, Content, Footer, Sider } = Layout;
+const {  Content, Sider } = Layout;
 
 const Main = () => {
   const location=useLocation();
@@ -51,9 +51,9 @@ const Main = () => {
           </div>
           {
             collapsed ? (
-              <img src={logo} className="main-logo" style={{display:"none"}}/>
+              <img src={logo} className="main-logo" style={{display:"none"}} alt="main-logo"/>
             ) : (
-              <img src={logo} className="main-logo" />
+              <img src={logo} className="main-logo" alt="main-logo-2"/>
             )
           }
           

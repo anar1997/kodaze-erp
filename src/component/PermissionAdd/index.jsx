@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import { IoArrowBack } from "react-icons/io5";
 import "./style.css";
 import { Calendar } from "react-multi-date-picker";
@@ -41,7 +40,7 @@ const PermissionAdd = () => {
     onSubmit: (values) => {
       values.employee_id = from;
       let dateList = [];
-      values.day_off_date.map((v) => {
+      values.day_off_date.forEach((v) => {
         let a = `${v.day}-${v.month.number}-${v.year}`;
         dateList.push(a);
       });
@@ -52,9 +51,7 @@ const PermissionAdd = () => {
       isPaidRef.current.checked = false;
     },
   });
-  useEffect(() => {
-    console.log(from);
-  }, []);
+ 
   return (
     <div>
       <form action="" onSubmit={formik.handleSubmit}>

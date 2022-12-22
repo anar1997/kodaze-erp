@@ -100,7 +100,7 @@ const AccountSettings = () => {
             </div>
           </Col>
           <Col span={4} className="account-third-col">
-            <img src={profile} className="account-profile-pic account-img" />
+            <img src={profile} className="account-profile-pic account-img" alt="profile-img" />
             <div className="account-i-img">
               <div className="account-p-image">
                 <IoAddCircle className="account-i-pencil account-upload-button" />

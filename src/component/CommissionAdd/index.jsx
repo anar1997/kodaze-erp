@@ -8,8 +8,8 @@ import "./style.css";
 const CommissionAdd = () => {
   const dispatch = useDispatch();
 
-  const [monthId, setMonthId] = useState(["", "", "", ""]);
-  const [monthSalary, setMonthSalary] = useState(["", "", "", ""]);
+  // const [monthId, setMonthId] = useState(["", "", "", ""]);
+  // const [monthSalary, setMonthSalary] = useState(["", "", "", ""]);
 
   function handleMonthId(e, i) {
     console.log(e.target.value);
