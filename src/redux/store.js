@@ -5,6 +5,7 @@ import departamentSlice from "./slices/humanResourcesSlices/departamentSlice";
 import holidaySlice from "./slices/humanResourcesSlices/holidaySlice";
 import monthRangeSlice from "./slices/humanResourcesSlices/monthRangeSlice";
 import officeSlice from "./slices/humanResourcesSlices/officeSlice";
+import permissionSlice from "./slices/humanResourcesSlices/permissionSlice";
 import positionSlice from "./slices/humanResourcesSlices/positionSlice";
 import regionSlice from "./slices/humanResourcesSlices/regionSlice";
 import userSlice from "./slices/humanResourcesSlices/userSlice";
@@ -23,5 +24,6 @@ export default configureStore({
         region: regionSlice,
         monthRange: monthRangeSlice,
         holiday: holidaySlice,
+        permission: permissionSlice
     }
 })

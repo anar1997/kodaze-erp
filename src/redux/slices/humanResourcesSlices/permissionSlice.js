@@ -1,9 +1,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "../../../axios";
 
-export const postPermissionAsync = createAsyncThunk('postPermissionAsync', async (data)=>{
-    const res = await axios.post('holidays/employee-day-off-operation/', data)
-    return res.data;
+export const postPermissionAsync = createAsyncThunk('postPermissionAsync', async (data, {rejectWithValue})=>{
+    try {
+        const res = await axios.post('holidays/employee-day-off-operation/', data)
+        return res.data;
+    } catch (error) {
+        return rejectWithValue(error.response.data)
+    }
 })
 
 
@@ -12,7 +16,8 @@ export const permissionSlice = createSlice({
     initialState: {
         data: [],
         isLoading: false,
-        error: null
+        error: null,
+        successMessage: null,
     }, 
     reducers: {},
     extraReducers: {
@@ -21,11 +26,15 @@ export const permissionSlice = createSlice({
         },
         [postPermissionAsync.fulfilled]: (state, action)=>{
             state.isLoading = false
-            console.log(state.payload);
             console.log("yerine yetirildi");
+            state.successMessage = action.payload.detail;
+            state.error = null;
         },
         [postPermissionAsync.rejected]: (state, action)=>{
             console.log('xeta cixdi');
+            state.isLoading=false
+            state.error=action.payload.detail
+            state.successMessage=null;
         }
     }
 })

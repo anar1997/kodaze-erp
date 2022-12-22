@@ -2,7 +2,7 @@ import React from 'react'
 
 const Error = ({message}) => {
   return (
-    <div style={{padding: 15, fontSize: 16}}>{message}</div>
+    <div style={{padding: 15, fontSize: 16, backgroundColor: "red"}}>{message}</div>
   )
 }
 
