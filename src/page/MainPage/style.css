@@ -24,7 +24,7 @@
   margin-top: 10px !important;
   margin-right: 10px !important;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .main-hamburger-closed{

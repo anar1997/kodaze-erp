@@ -222,7 +222,7 @@
   margin-top: 50px !important;
   margin-bottom: 50px !important;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .detail-kitabxana-button-1 {
@@ -307,9 +307,7 @@
 
 .detail-card-icon {
   display: flex;
-  /* justify-content: end; */
   padding-right: 25px !important;
-  /* margin-right: 50px !important; */
 }
 
 .detail-i-trash-button{
