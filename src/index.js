@@ -3,13 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import Main from "./page/MainPage";
-import WorkerAdd from "./component/WorkerAdd";
 import reportWebVitals from "./reportWebVitals";
-import AccountSettings from "./component/AccountSettings";
-import WorkerDetail from "./component/WorkerDetail";
-import HumanTable from "./component/HumanTable";
-import CommissionAdd from "./component/CommissionAdd";
-import LoginPage from "./page/Login";
 import store from "./redux/store";
 import { Provider } from "react-redux";
 
@@ -19,12 +13,6 @@ root.render(
     <Provider store={store}>
       <BrowserRouter>
         <Main />
-        {/* <WorkerAdd /> */}
-        {/* <AccountSettings /> */}
-        {/* <WorkerDetail/> */}
-        {/* <HumanTable/> */}
-        {/* <CommissionAdd/> */}
-        {/* <LoginPage /> */}
       </BrowserRouter>
     </Provider>
   // </React.StrictMode>
