@@ -5,15 +5,15 @@ import { useState } from "react";
 import { Calendar } from "react-multi-date-picker";
 import { useDispatch, useSelector } from "react-redux";
 import { useFormik } from "formik";
-import { postHolidayAsync } from "../../redux/slices/humanResourcesSlices/holidaySlice";
-import { getUsersAsync } from "../../redux/slices/humanResourcesSlices/userSlice";
-import { getCompanyAsync } from "../../redux/slices/humanResourcesSlices/companySlice";
-import { getOfficeAsync } from "../../redux/slices/humanResourcesSlices/officeSlice";
-import Error from "../Error";
+import { postHolidayAsync } from "../../../redux/slices/humanResourcesSlices/holidaySlice";
+import { getUsersAsync } from "../../../redux/slices/humanResourcesSlices/userSlice";
+import { getCompanyAsync } from "../../../redux/slices/humanResourcesSlices/companySlice";
+import { getOfficeAsync } from "../../../redux/slices/humanResourcesSlices/officeSlice";
+import Error from "../../Error";
 import Option from "./Option";
 import ReactSelect from "react-select";
 import * as yup from "yup";
-import Success from "../Success";
+import Success from "../../Success";
 import { useRef } from "react";
 
 const HolidayAdd = () => {

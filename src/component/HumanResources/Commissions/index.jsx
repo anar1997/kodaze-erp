@@ -1,12 +1,12 @@
 import React from "react";
 import { IoPencil } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import PageArea from "../Area";
-import PageHeader from "../Header";
+import PageArea from "../../Area";
+import PageHeader from "../../Header";
 import "./style.css";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { getCommissionAsync } from "../../redux/slices/humanResourcesSlices/commissionSlice";
+import { getCommissionAsync } from "../../../redux/slices/humanResourcesSlices/commissionSlice";
 
 const Commisions = () => {
   const dispatch = useDispatch();

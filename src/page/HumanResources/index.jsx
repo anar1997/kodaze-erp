@@ -4,7 +4,7 @@ import PageArea from "../../component/Area";
 import PageHeader from "../../component/Header";
 import "./style.css";
 import { Col, Row } from "antd";
-import HumanCard from "../../component/Card";
+import HumanCard from "../../component/HumanResources/Card";
 import { useSelector, useDispatch } from "react-redux";
 import { getUsersAsync } from "../../redux/slices/humanResourcesSlices/userSlice";
 

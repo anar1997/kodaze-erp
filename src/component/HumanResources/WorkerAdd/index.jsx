@@ -4,21 +4,21 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import profile from "./not-image.png";
 import { IoAddCircle } from "react-icons/io5";
-import PageHeader from "../Header";
-import PageArea from "../Area";
+import PageHeader from "../../Header";
+import PageArea from "../../Area";
 import { useSelector, useDispatch } from "react-redux";
 import {
   getUsersAsync,
   postUserAsync,
-} from "../../redux/slices/humanResourcesSlices/userSlice";
+} from "../../../redux/slices/humanResourcesSlices/userSlice";
 import { useFormik } from "formik";
 import { useEffect } from "react";
-import { getRegionsAsync } from "../../redux/slices/humanResourcesSlices/regionSlice";
-import { getCompanyAsync } from "../../redux/slices/humanResourcesSlices/companySlice";
-import { getOfficeAsync } from "../../redux/slices/humanResourcesSlices/officeSlice";
-import { getDepartamentAsync } from "../../redux/slices/humanResourcesSlices/departamentSlice";
-import { getPositionAsync } from "../../redux/slices/humanResourcesSlices/positionSlice";
-import { getCommissionAsync } from "../../redux/slices/humanResourcesSlices/commissionSlice";
+import { getRegionsAsync } from "../../../redux/slices/humanResourcesSlices/regionSlice";
+import { getCompanyAsync } from "../../../redux/slices/humanResourcesSlices/companySlice";
+import { getOfficeAsync } from "../../../redux/slices/humanResourcesSlices/officeSlice";
+import { getDepartamentAsync } from "../../../redux/slices/humanResourcesSlices/departamentSlice";
+import { getPositionAsync } from "../../../redux/slices/humanResourcesSlices/positionSlice";
+import { getCommissionAsync } from "../../../redux/slices/humanResourcesSlices/commissionSlice";
 import validations from "./validation";
 import SignatureCanvas from "react-signature-canvas";
 
@@ -487,7 +487,7 @@ const WorkerAdd = () => {
             <input type="checkbox" />
             <label>Müqavilə Şərtləri</label> oxudum və qəbul etdim
           </div>
-          <button className="worker-kitabxana-button-1">Ləğv et</button>
+          <Link to=".." className="worker-kitabxana-button-1">Ləğv et</Link>
           <button
             type="submit"
             form="register-form"

@@ -4,12 +4,12 @@ import "./style.css";
 import { Calendar } from "react-multi-date-picker";
 import { useDispatch, useSelector } from "react-redux";
 import { useFormik } from "formik";
-import { postPermissionAsync } from "../../redux/slices/humanResourcesSlices/permissionSlice";
+import { postPermissionAsync } from "../../../redux/slices/humanResourcesSlices/permissionSlice";
 import { useLocation } from "react-router-dom";
 import * as yup from "yup";
 import { useRef } from "react";
-import Success from "../Success";
-import Error from "../Error";
+import Success from "../../Success";
+import Error from "../../Error";
 
 
 const PermissionAdd = () => {

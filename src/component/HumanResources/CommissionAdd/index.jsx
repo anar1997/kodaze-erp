@@ -1,8 +1,8 @@
 import { useFormik } from "formik";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { postCommissionAsync } from "../../redux/slices/humanResourcesSlices/commissionSlice";
-import { getMonthRangeAsync } from "../../redux/slices/humanResourcesSlices/monthRangeSlice";
+import { postCommissionAsync } from "../../../redux/slices/humanResourcesSlices/commissionSlice";
+import { getMonthRangeAsync } from "../../../redux/slices/humanResourcesSlices/monthRangeSlice";
 import "./style.css";
 
 const CommissionAdd = () => {

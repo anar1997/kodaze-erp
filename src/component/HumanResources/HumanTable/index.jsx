@@ -1,11 +1,11 @@
 import { Col, Row } from "antd";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import PageArea from "../Area";
-import PageHeader from "../Header";
+import PageArea from "../../Area";
+import PageHeader from "../../Header";
 import "./style.css";
 import { useSelector, useDispatch } from "react-redux";
-import { getWorkGraphicAsync } from "../../redux/slices/humanResourcesSlices/workGraphicSlice";
+import { getWorkGraphicAsync } from "../../../redux/slices/humanResourcesSlices/workGraphicSlice";
 import { useEffect } from "react";
 
 const HumanTable = () => {

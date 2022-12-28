@@ -1,6 +1,6 @@
 import React from "react";
-import PageArea from "../Area";
-import PageHeader from "../Header";
+import PageArea from "../../Area";
+import PageHeader from "../../Header";
 import { Col, Row } from "antd";
 import { Link } from "react-router-dom";
 import profile from "./man.jfif";

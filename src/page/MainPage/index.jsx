@@ -16,13 +16,13 @@ import { IoMdBuild } from "react-icons/io";
 import logo from '../../assets/a1.png'
 
 import {RxHamburgerMenu} from 'react-icons/rx'
-import WorkerAdd from "../../component/WorkerAdd";
-import WorkerDetail from "../../component/WorkerDetail";
-import HumanTable from "../../component/HumanTable";
-import Commisions from "../../component/Commissions";
-import CommissionAdd from "../../component/CommissionAdd";
-import HolidayAdd from "../../component/HolidayAdd";
-import PermissionAdd from "../../component/PermissionAdd";
+import WorkerAdd from "../../component/HumanResources/WorkerAdd";
+import WorkerDetail from "../../component/HumanResources/WorkerDetail";
+import HumanTable from "../../component/HumanResources/HumanTable";
+import Commisions from "../../component/HumanResources/Commissions";
+import CommissionAdd from "../../component/HumanResources/CommissionAdd";
+import HolidayAdd from "../../component/HumanResources/HolidayAdd";
+import PermissionAdd from "../../component/HumanResources/PermissionAdd";
 import AdvanceAdd from "../../component/FinanceComp/AdvanceAdd";
 import BonusAdd from "../../component/FinanceComp/BonusAdd";
 import FineAdd from "../../component/FinanceComp/AdvanceAdd";

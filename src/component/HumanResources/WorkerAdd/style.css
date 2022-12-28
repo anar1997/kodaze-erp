@@ -241,7 +241,8 @@
         width: 105px;
         height: 40px;
         border: none;
-        padding-bottom: 2px !important;
+        padding-top: 8px !important;
+        /* padding-bottom: 2px !important; */
         margin-right: 20px !important;
         }
         
