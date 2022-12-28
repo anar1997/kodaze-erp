@@ -1,15 +1,15 @@
-import { Col, Row } from 'antd'
-import React from 'react'
-import { Link } from 'react-router-dom'
-import PageArea from '../../component/Area'
-import PageHeader from '../../component/Header'
-import './style.css'
+import { Col, Row } from "antd";
+import React from "react";
+import { Link } from "react-router-dom";
+import PageArea from "../../component/Area";
+import PageHeader from "../../component/Header";
+import "./style.css";
 
 const FinanceAndInstallment = () => {
   return (
     <div>
-      <PageHeader name="Mühasibat/Əməkhaqqı"/>
-      <PageArea/>
+      <PageHeader name="Mühasibat/Əməkhaqqı" />
+      <PageArea />
       <Row>
         <Col span={20}>
           <table className="finance-table">
@@ -28,12 +28,12 @@ const FinanceAndInstallment = () => {
                 <th className="finance-cell-7">Satış sayı</th>
                 <th className="finance-cell-8">Komissiya</th>
                 <th className="finance-cell-9">Bonus</th>
-                <th className='finance-cell-9'>Avans</th>
-                <th className='finance-cell-9'>Kəsinti</th>
-                <th className='finance-cell-9'>Cərimə</th>
-                <th className='finance-cell-9'>Yekun</th>
-                <th className='finance-cell-10'>Ə/H ödəmə tarixi</th>
-                <th className='finance-cell-10'>Status</th>
+                <th className="finance-cell-9">Avans</th>
+                <th className="finance-cell-9">Kəsinti</th>
+                <th className="finance-cell-9">Cərimə</th>
+                <th className="finance-cell-9">Yekun</th>
+                <th className="finance-cell-10">Ə/H ödəmə tarixi</th>
+                <th className="finance-cell-10">Status</th>
               </tr>
             </thead>
             <tbody>
@@ -55,19 +55,32 @@ const FinanceAndInstallment = () => {
                 <td className="finance-cell-5a">2</td>
                 <td className="finance-cell-5a">2</td>
                 <td className="finance-cell-5a">2</td>
-                <td className='finance-cell-5a'>06/20/2022</td>
-                <td className='finance-cell-6a'>Ödənilib</td>
+                <td className="finance-cell-5a">06/20/2022</td>
+                <td className="finance-cell-6a">Ödənilib</td>
               </tr>
             </tbody>
           </table>
 
           <div className="finance-button">
-            <button className="finance-button-1">
-              <Link className="finance-link-1" to="holiday-add">Tətil əlavə et</Link>
-            </button>
-            <button className="finance-button-2">
-                <Link className="finance-link-2" to="permission-add">İcazə əlavə et</Link>
-            </button>
+            <Link className="finance-link-1" to="advance-add">
+              Avans əlavə et
+            </Link>
+
+            <Link className="finance-link-1" to="bonus-add">
+              Bonus əlavə et
+            </Link>
+
+            <Link className="finance-link-1" to="fine-add">
+              Cərimə əlavə et
+            </Link>
+
+            <Link className="finance-link-1" to="interruption-add">
+              Kəsinti əlavə et
+            </Link>
+            
+            <Link className="finance-link-2" to="pay-salary">
+              Ə/H ödə
+            </Link>
           </div>
         </Col>
 
@@ -124,7 +137,7 @@ const FinanceAndInstallment = () => {
         </Col>
       </Row>
     </div>
-  )
-}
+  );
+};
 
-export default FinanceAndInstallment
+export default FinanceAndInstallment;

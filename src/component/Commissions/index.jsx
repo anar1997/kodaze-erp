@@ -26,11 +26,9 @@ const Commisions = () => {
           { name: "Kommissiyalar", link: "/human-resources/commissions" },
         ]}
       />
-      <button className="commissions-button">
-        <Link className="commissions-button-link" to="commission-add">
+        <Link className="commissions-button" to="commission-add">
           Komissiya Əlavə et
         </Link>
-      </button>
       <table className="commissions-table">
         <thead>
           <tr>

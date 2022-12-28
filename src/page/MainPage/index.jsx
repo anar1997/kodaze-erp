@@ -23,6 +23,11 @@ import Commisions from "../../component/Commissions";
 import CommissionAdd from "../../component/CommissionAdd";
 import HolidayAdd from "../../component/HolidayAdd";
 import PermissionAdd from "../../component/PermissionAdd";
+import AdvanceAdd from "../../component/FinanceComp/AdvanceAdd";
+import BonusAdd from "../../component/FinanceComp/BonusAdd";
+import FineAdd from "../../component/FinanceComp/AdvanceAdd";
+import InterruptionAdd from "../../component/FinanceComp/InterruptionAdd";
+import PaySalary from "../../component/FinanceComp/PaySalary";
 
 const {  Content, Sider } = Layout;
 
@@ -160,8 +165,15 @@ const Main = () => {
             <Route path="crm" element={<CRM />} />
             <Route
               path="finance-and-installment"
-              element={<FinanceAndInstallment />}
-            />
+              element={<Outlet />}
+            >
+              <Route path="" element={<FinanceAndInstallment />} />
+              <Route path="advance-add" element={<AdvanceAdd />}/>
+              <Route path="bonus-add" element={<BonusAdd />}/>
+              <Route path="fine-add" element={<FineAdd />}/>
+              <Route path="interruption-add" element={<InterruptionAdd />}/>
+              <Route path="pay-salary" element={<PaySalary />}/>
+            </Route>
             <Route path="/" element={<HomePage />} />
             <Route path="service" element={<Service />} />
             <Route path="statistics" element={<Statistics />} />

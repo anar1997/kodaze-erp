@@ -7,13 +7,56 @@
 }
 
 .finance-table th {
-    border: 1px solid #e0e0e0;
-    border-collapse: collapse;
-    /* padding: 3px !important; */
-  }
-  
-  .finance-table td {
-    border: 1px solid #e0e0e0;
-    border-collapse: collapse;
-    padding: 5px !important;
-  }
+  border: 1px solid #e0e0e0;
+  border-collapse: collapse;
+  /* padding: 3px !important; */
+}
+
+.finance-table td {
+  border: 1px solid #e0e0e0;
+  border-collapse: collapse;
+  padding: 5px !important;
+}
+
+.finance-button{
+  margin-top: 20px !important;
+  margin-left: 40px !important;
+}
+
+.finance-link-1 {
+  background-color: #24619a;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 40px;
+  width: 128px;
+  height: 40px;
+  border: none;
+  padding-top: 8px !important;
+  margin-right: 20px !important;
+  display: inline-block;
+}
+
+.finance-link-1:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.finance-link-2 {
+  background-color: #24619a;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 40px;
+  width: 80px;
+  height: 40px;
+  border: none;
+  padding-top: 8px !important;
+  margin-right: 20px !important;
+  display: inline-block;
+}
+
+.finance-link-2:hover {
+  color: white;
+  cursor: pointer;
+}

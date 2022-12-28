@@ -1,0 +1,68 @@
+.pay-salary{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 600px !important;
+    height: 300px !important;
+    margin-left: 50px !important;
+    margin-top: 40px !important;
+    margin-bottom: 10px !important;
+}
+
+.pay-salary p{
+    font-weight: bolder;
+    font-size: 21px;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 0px !important;
+}
+
+.pay-p{
+    margin-top: 20px !important;
+}
+
+.pay-div{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px !important;
+}
+
+.pay-button-1{
+    background-color: #C20000;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 40px;
+    padding-top: 8px !important;
+    width: 105px;
+    height: 40px;
+    border: none;
+    margin-right: 20px !important;
+}
+
+.pay-button-2{
+    background-color: #21D25C;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 40px;
+    padding-top: 8px !important;
+    width: 105px;
+    height: 40px;
+    border: none;
+    margin-right: 20px !important;
+}
+
+.pay-button-1:hover{
+    color: white;
+}
+
+.pay-button-2:hover{
+    color: white;
+}
