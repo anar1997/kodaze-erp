@@ -1,8 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "../../../axios";
 
-export const getCommissionAsync = createAsyncThunk('commissionAsync', async ()=>{
-    const res = await axios.get('salaries/commission/')
+export const getCommissionAsync = createAsyncThunk('commissionAsync', async (offset)=>{
+    const res = await axios.get(`salaries/commission/?limit=20&offset=${offset}`)
     return res.data
 })
 
@@ -16,7 +16,9 @@ export const commissionSlice = createSlice({
     initialState: {
         data: [],
         isLoading: false,
-        error: null
+        error: null,
+        totalPage: 0,
+        pageLimit: 20,
     }, 
     reducers: {},
     extraReducers: {
@@ -26,6 +28,7 @@ export const commissionSlice = createSlice({
         [getCommissionAsync.fulfilled]: (state, action)=>{
             state.isLoading = false
             state.data = action.payload.results
+            state.totalPage = action.payload.count
         },
         [getCommissionAsync.rejected]: (state, action)=>{
             console.log('xeta cixdi');

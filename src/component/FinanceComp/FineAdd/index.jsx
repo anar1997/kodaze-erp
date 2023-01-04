@@ -5,7 +5,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Link } from "react-router-dom";
 
-const BonusAdd = () => {
+const FineAdd = () => {
   const [startDate, setStartDate] = useState();
   const ExampleCustomInput = forwardRef(({ value, onClick, onChange }, ref) => (
     <input
@@ -54,4 +54,4 @@ const BonusAdd = () => {
   );
 };
 
-export default BonusAdd;
+export default FineAdd;

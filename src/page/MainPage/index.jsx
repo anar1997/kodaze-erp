@@ -14,7 +14,6 @@ import { FaHome, FaWarehouse, FaTasks } from 'react-icons/fa'
 import { IoPeopleCircleOutline, IoBookmarks, IoCalculatorOutline, IoCellularSharp, IoCloseOutline } from 'react-icons/io5'
 import { IoMdBuild } from "react-icons/io";
 import logo from '../../assets/a1.png'
-
 import {RxHamburgerMenu} from 'react-icons/rx'
 import WorkerAdd from "../../component/HumanResources/WorkerAdd";
 import WorkerDetail from "../../component/HumanResources/WorkerDetail";
@@ -25,7 +24,7 @@ import HolidayAdd from "../../component/HumanResources/HolidayAdd";
 import PermissionAdd from "../../component/HumanResources/PermissionAdd";
 import AdvanceAdd from "../../component/FinanceComp/AdvanceAdd";
 import BonusAdd from "../../component/FinanceComp/BonusAdd";
-import FineAdd from "../../component/FinanceComp/AdvanceAdd";
+import FineAdd from "../../component/FinanceComp/FineAdd";
 import InterruptionAdd from "../../component/FinanceComp/InterruptionAdd";
 import PaySalary from "../../component/FinanceComp/PaySalary";
 
@@ -167,7 +166,7 @@ const Main = () => {
               path="finance-and-installment"
               element={<Outlet />}
             >
-              <Route path="" element={<FinanceAndInstallment />} />
+              <Route path="" element={<FinanceAndInstallment />}/>
               <Route path="advance-add" element={<AdvanceAdd />}/>
               <Route path="bonus-add" element={<BonusAdd />}/>
               <Route path="fine-add" element={<FineAdd />}/>

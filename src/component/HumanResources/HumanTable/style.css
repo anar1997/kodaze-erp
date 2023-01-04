@@ -54,14 +54,14 @@
 .human-cell-5a {
   text-align: center;
 }
-.human-check {
-}
+
 
 /* ***************************************** */
 
 .humantable-button {
     margin-left: 40px !important;
     margin-top: 20px !important;
+    margin-bottom: 10px !important;
 }
 
 .humantable-button-1 {
@@ -105,4 +105,34 @@
 .humantable-link-2:hover{
     color: white;
     cursor: pointer;
+}
+
+.search-button{
+  width: 70px !important;
+  text-align: center;
+  border-radius: 50px;
+  border: none;
+  background-color: #24619a;
+  color: #ffffff;
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+  margin-right: 10px !important;
+}
+
+.search-personal-2{
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+  background-size: 20px;
+  border: none;
+  border-bottom: 1px solid #b4b4b4;  
+  border-radius: 0;
+  margin-top: 15px !important;
+}
+
+.search-personal-2:hover{
+  /* border-color: ; */
+}
+
+.search-personal-2:focus{
+  outline: none;
 }

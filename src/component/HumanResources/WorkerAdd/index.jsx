@@ -44,7 +44,7 @@ const WorkerAdd = () => {
       register_type: "Şirkət",
       fullname: "",
       phone_number_1: "",
-      phone_number_2: "",
+      phone_number_2: "", 
       city: "",
       address: "",
       email: "",
@@ -155,6 +155,7 @@ const WorkerAdd = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
               >
+                <option value={null}></option>
                 {region.map((v, i) => (
                   <option key={"region" + v.id} value={v.id}>
                     {v.region_name}
@@ -197,6 +198,7 @@ const WorkerAdd = () => {
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                   >
+                    <option value={null}></option>
                     {company.map((v, i) => (
                       <option key={"company" + v.id} value={v.id}>
                         {v.name}
@@ -213,6 +215,7 @@ const WorkerAdd = () => {
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                   >
+                    <option value={null}></option>
                     {office.map((v, i) => (
                       <option key={"office" + v.id} value={v.id}>
                         {v.name}
@@ -231,6 +234,7 @@ const WorkerAdd = () => {
                   onBlur={formik.handleBlur}
                   className="worker-uni-select"
                 >
+                  <option value={null}></option>
                   {departament.map((v, i) => (
                     <option key={"departament" + v.id} value={v.id}>
                       {v.name}
@@ -249,6 +253,7 @@ const WorkerAdd = () => {
                 onBlur={formik.handleBlur}
                 className="worker-uni-select"
               >
+                <option value={null}></option>
                 {supervisor.map((v, i) => (
                   <option key={"supervisor" + v.id} value={v.id}>
                     {v.fullname}
@@ -265,6 +270,7 @@ const WorkerAdd = () => {
                 onBlur={formik.handleBlur}
                 className="worker-uni-select"
               >
+                <option value={null}></option>
                 {position.map((v, i) => (
                   <option key={"position" + v.id} value={v.id}>
                     {v.name}
@@ -393,6 +399,7 @@ const WorkerAdd = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
               >
+                <option value={null}></option>
                 {commission.map((v, i) => (
                   <option key={"commission" + v.id} value={v.id}>
                     {v.commission_name}
@@ -405,7 +412,7 @@ const WorkerAdd = () => {
               <select
                 className="worker-user-name-2"
                 type="text"
-                name="salary-type"
+                name="salary_style"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
               >

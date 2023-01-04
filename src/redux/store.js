@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+import salaryViewsSlice from "./slices/Financeİnstallment/salaryViewsSlice";
 import  commissionSlice  from "./slices/humanResourcesSlices/commissionSlice";
 import companySlice from "./slices/humanResourcesSlices/companySlice";
 import departamentSlice from "./slices/humanResourcesSlices/departamentSlice";
@@ -24,6 +25,7 @@ export default configureStore({
         region: regionSlice,
         monthRange: monthRangeSlice,
         holiday: holidaySlice,
-        permission: permissionSlice
+        permission: permissionSlice,
+        salaryView: salaryViewsSlice
     }
 })

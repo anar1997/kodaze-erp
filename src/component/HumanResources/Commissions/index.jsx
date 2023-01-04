@@ -7,10 +7,23 @@ import "./style.css";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { getCommissionAsync } from "../../../redux/slices/humanResourcesSlices/commissionSlice";
+import { Pagination } from "antd";
+import { useState } from "react";
 
 const Commisions = () => {
+  let [currentPage, setCurrentPage] = useState(1)
+
   const dispatch = useDispatch();
   let data = useSelector((state) => state.commission.data);
+  let totalPage = useSelector((state) => state.commission.totalPage);
+  let limitPage = useSelector((state) => state.commission.pageLimit);
+
+  console.log(totalPage);
+  const changePage = (e) =>{
+    setCurrentPage(e);
+    let offset = (e-1)*limitPage;
+    dispatch(getCommissionAsync(offset))
+  }
 
   useEffect(() => {
     dispatch(getCommissionAsync());
@@ -53,6 +66,8 @@ const Commisions = () => {
           ))}
         </tbody>
       </table>
+      {totalPage>20 ?(<Pagination onChange={(e)=>{changePage(e)}} className="pagination-2" current={currentPage} total={totalPage} defaultPageSize={limitPage} showSizeChanger={false}/>
+):("")}
     </div>
   );
 };
