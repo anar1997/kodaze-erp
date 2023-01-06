@@ -121,12 +121,11 @@
   margin-bottom: 5px !important;
 }
 
-select[name="company"]:invalid {
-  color: gray;
+
+
+select {
+  color: #9e9e9e;
 }
-option[value=""][disabled] {
-  display: none;
-}
-option {
+option:not(:first-of-type) {
   color: black;
 }

@@ -150,7 +150,7 @@ const HumanResources = () => {
                    Company                      
                 </option>
                 {company.map((v, i) => (
-                  <option key={"company" + v.id} value={v.id}>
+                  <option className="select-option" key={"company" + v.id} value={v.id}>
                     {v.name}
                   </option>
                 ))}

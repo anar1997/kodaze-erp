@@ -121,3 +121,31 @@
   padding-bottom: 7px !important;
   margin-right: 10px !important;
 }
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px !important;
+  margin-bottom: 5px !important;
+}
+
+.select-time{
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+  background-size: 20px;
+  border: none;
+  border-bottom: 1px solid #b4b4b4;  
+  border-radius: 0;
+  margin-top: 15px !important;
+}
+
+.select-time:focus{
+  outline: none;
+}
+
+select {
+  color: #9e9e9e;
+}
+option:not(:first-of-type) {
+  color: black;
+}

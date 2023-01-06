@@ -16,7 +16,7 @@ export let filterUserAsync = createAsyncThunk('user/filterAsync', async (values)
     let holding = values.holding
     console.log(holding)
     let registerType = "";
-    if(holding==true){
+    if(holding===true){
         registerType = "Holding"
     }
     const res = await axios.get(`users/?limit=20&offset=${values.offset}&is_superuser=false&is_active=true&register_type=${registerType}&fullname=${values.fullname}&company=${values.company}&office=${values.office}&departament=${values.departament}&position=${values.position}&salary_style=${values.salary_style}`);

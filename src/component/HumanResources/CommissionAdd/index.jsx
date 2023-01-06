@@ -9,14 +9,14 @@ const CommissionAdd = () => {
   const dispatch = useDispatch();
 
   const [monthList1, setMonthList1] = useState("");
-  const [monthList2, setMonthList2] = useState("");
-  const [monthList3, setMonthList3] = useState("");
-  const [monthList4, setMonthList4] = useState("");
+  // const [monthList2, setMonthList2] = useState("");
+  // const [monthList3, setMonthList3] = useState("");
+  // const [monthList4, setMonthList4] = useState("");
 
   const [monthSalaryList1, setMonthSalaryList1] = useState("");
-  const [monthSalaryList2, setMonthSalaryList2] = useState("");
-  const [monthSalaryList3, setMonthSalaryList3] = useState("");
-  const [monthSalaryList4, setMonthSalaryList4] = useState("");
+  // const [monthSalaryList2, setMonthSalaryList2] = useState("");
+  // const [monthSalaryList3, setMonthSalaryList3] = useState("");
+  // const [monthSalaryList4, setMonthSalaryList4] = useState("");
 
   // let monthList = ["", "", "", ""];
   // let monthSalaryList = ["", "", "", ""];
@@ -46,7 +46,7 @@ const CommissionAdd = () => {
       creditor_per_cent: "",
     },
     onSubmit: (values) => {
-      let monthRangeList = [];
+      // let monthRangeList = [];
       // if (mothId1 != "") {
       //   let a = `${v}-${monthSalaryList[i]}`;
       //   monthRangeList.push(a)

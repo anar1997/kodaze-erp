@@ -4,6 +4,9 @@ import { forwardRef, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Link } from "react-router-dom";
+import { useFormik } from "formik";
+import { useDispatch } from "react-redux";
+import { postUserAsync } from "../../../redux/slices/humanResourcesSlices/userSlice";
 
 const AdvanceAdd = () => {
   const [startDate, setStartDate] = useState();
@@ -16,6 +19,20 @@ const AdvanceAdd = () => {
       ref={ref}
     />
   ));
+
+  const dispatch = useDispatch();
+
+  const formik = useFormik({
+    initialValues: {
+      employee_id: "",
+      note: "",
+      date: "",
+      amount: ""
+    },
+    onSubmit: (values) => {
+      dispatch(postUserAsync(values))
+    }
+  })
   return (
     <div className="advance-add">
       <p>Avans əlavə etmək üçün aşağıdakı sətirləri doldurun.</p>

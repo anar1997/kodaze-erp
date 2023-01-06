@@ -10,7 +10,7 @@ import {
 } from "../../../redux/slices/humanResourcesSlices/workGraphicSlice";
 import { useEffect } from "react";
 import { useFormik } from "formik";
-import { DatePicker, Space } from 'antd';
+import { DatePicker } from 'antd';
 import { getCompanyAsync } from "../../../redux/slices/humanResourcesSlices/companySlice";
 import { getOfficeAsync } from "../../../redux/slices/humanResourcesSlices/officeSlice";
 import { getPositionAsync } from "../../../redux/slices/humanResourcesSlices/positionSlice";

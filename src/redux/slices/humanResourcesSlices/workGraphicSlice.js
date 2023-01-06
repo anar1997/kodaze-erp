@@ -9,7 +9,7 @@ export const getWorkGraphicAsync = createAsyncThunk('workGraphic', async (offset
 export const filterWorkGraphicAsync = createAsyncThunk('filterWorkGraphic', async (values)=>{
     let holding = values.holding
     let registerType = ""
-    if(holding==true){
+    if(holding===true){
         registerType = "Holding"
     }
     const res = await axios.get(`holidays/employee-working-days/?limit=20&offset=${values.offset}&employee__fullname=${values.fullname}&employee__company=${values.company}&employee__office=${values.office}&employee__position=${values.position}&employee__register_type=${registerType}&date__gte=${values.dateGte}&date__lte=${values.dateLte}`)

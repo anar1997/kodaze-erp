@@ -1,23 +1,70 @@
-import { Col, Row } from "antd";
+import { Col, Row, Pagination, DatePicker } from "antd";
+import { useFormik } from "formik";
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import PageArea from "../../component/Area";
 import PageHeader from "../../component/Header";
-import { getSalaryViewsAsync } from "../../redux/slices/Financeİnstallment/salaryViewsSlice";
+import {
+  filterSalaryViewsAsync,
+  getSalaryViewsAsync,
+} from "../../redux/slices/Financeİnstallment/salaryViewsSlice";
+import { getCompanyAsync } from "../../redux/slices/humanResourcesSlices/companySlice";
+import { getOfficeAsync } from "../../redux/slices/humanResourcesSlices/officeSlice";
+import { getPositionAsync } from "../../redux/slices/humanResourcesSlices/positionSlice";
 import "./style.css";
 
 const FinanceAndInstallment = () => {
   const [check, setCheck] = useState([]);
+  let [currentPage, setCurrentPage] = useState(1);
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
 
   const dispatch = useDispatch();
   let data = useSelector((state) => state.salaryView.data);
   let totalPage = useSelector((state) => state.salaryView.totalPage);
   let limitPage = useSelector((state) => state.salaryView.pageLimit);
 
+  let company = useSelector((state) => state.company.data);
+  let office = useSelector((state) => state.office.data);
+  let position = useSelector((state) => state.position.data);
+
+  const formik = useFormik({
+    initialValues: {
+      offset: "",
+      fullname: "",
+      salaryStyle: "",
+      isActive: "",
+      office: "",
+      company: "",
+      position: "",
+      saleQuantity: "",
+      dateGte: "",
+      dateLte: "",
+    },
+    onSubmit: (values) => {
+      values.dateGte = startDate;
+      values.dateLte = endDate;
+      let filteredValues = { ...values };
+      dispatch(filterSalaryViewsAsync(filteredValues));
+    },
+  });
+
+  const changePage = (e) => {
+    setCurrentPage(e);
+    let offset = (e - 1) * limitPage;
+    formik.values.offset = offset;
+    let filteredValues = { ...formik.values };
+    dispatch(filterSalaryViewsAsync(filteredValues));
+  };
+
   useEffect(() => {
-    dispatch(getSalaryViewsAsync());
+    let filteredValues = { ...formik.values };
+    dispatch(getCompanyAsync());
+    dispatch(getOfficeAsync());
+    dispatch(getPositionAsync());
+    dispatch(filterSalaryViewsAsync(filteredValues))
   }, [dispatch]);
 
   return (
@@ -77,10 +124,10 @@ const FinanceAndInstallment = () => {
                   </td>
                   <td className="finance-cell-5a">{v.employee.salary}</td>
                   <td className="finance-cell-5a">
-                    {v.extra_data.sale_quantity}
+                    {v.sale_quantity}
                   </td>
                   <td className="finance-cell-5a">
-                    {v.extra_data.commission_amount}
+                    {v.commission_amount}
                   </td>
                   <td className="finance-cell-5a">
                     {v.extra_data.total_bonus}
@@ -95,10 +142,19 @@ const FinanceAndInstallment = () => {
                     {v.extra_data.total_salarypunishment}
                   </td>
                   <td className="finance-cell-5a">
-                    {v.extra_data.final_salary}
+                    {v.final_salary}
                   </td>
-                  <td className="finance-cell-5a">{v.extra_data.pay_date}</td>
-                  <td className="finance-cell-6a">{v.extra_data.is_done}</td>
+                  <td className="finance-cell-5a">{v.pay_date}</td>
+                    {v.is_done ? (
+                       <td className="finance-cell-6a" style={{color: "green"}}>
+                        Ödənilib
+                       </td>
+                    ) : (
+                      <td className="finance-cell-6a" style={{color: "red"}}>
+                        Ödənilməyib
+                      </td>
+                    )}
+                 
                 </tr>
               ))}
             </tbody>
@@ -125,72 +181,136 @@ const FinanceAndInstallment = () => {
               Ə/H ödə
             </Link>
           </div>
+          <Pagination
+            onChange={(e) => {
+              changePage(e);
+            }}
+            className="pagination"
+            current={currentPage}
+            total={totalPage}
+            defaultPageSize={limitPage}
+            showSizeChanger={false}
+          />
         </Col>
 
         <Col span={4}>
+          <form action="" onSubmit={formik.handleSubmit}>
           <div className="finance-search">
             <h3>Ətraflı Axtar</h3>
-            <div className="check-hold">
-              <input type="checkbox" />
-              <h5>Holding</h5>
-            </div>
             <input
               type="text"
               className="finance-personal"
               placeholder="Əməkdaş axtar"
+              name="fullname"
+              value={formik.values.fullname}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
             />
             <select
               className="finance-select"
-              name=""
-              id=""
+              name="company"
               placeholder="Şirkət"
+              value={formik.values.company}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
             >
               <option disabled={true} value="">
                 Şirkət
               </option>
+              {company.map((v, i) => (
+                <option key={"company" + v.id} value={v.id}>
+                  {v.name}
+                </option>
+              ))}
             </select>
             <select
               className="finance-select"
-              name=""
-              id=""
+              name="office"
               placeholder="Ofis"
-            ></select>
+              value={formik.values.office}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            >
+              <option value="" disabled hidden>
+                Ofis
+              </option>
+              {office.map((v, i) => (
+                <option key={"office" + v.id} value={v.id}>
+                  {v.name}
+                </option>
+              ))}
+            </select>
             <select
               className="finance-select"
-              name=""
-              id=""
+              name="position"
               placeholder="Vəzifə"
-            ></select>
+              value={formik.values.position}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            >
+              <option value="" disabled hidden>
+                Vəzifə
+              </option>
+              {position.map((v, i) => (
+                <option key={"position" + v.id} value={v.id}>
+                  {v.name}
+                </option>
+              ))}
+            </select>
             <select
               className="finance-select"
-              name=""
-              id=""
+              name="isActive"
               placeholder="İşçi statusu"
-            ></select>
-            <select
+              value={formik.values.isActive}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            >
+               <option key={"worker-status-1"} value={true}>
+                  Aktiv
+                </option>
+                <option key={"worker-status-2"} value={false}>
+                  Passiv
+                </option>
+            </select>
+            <input
               className="finance-select"
-              name=""
-              id=""
+              name="saleQuantity"
               placeholder="Satış sayı"
-            ></select>
-            <select
-              className="finance-select"
-              name=""
-              id=""
+              type="number"
+              value={formik.values.saleQuantity}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            <DatePicker
               placeholder="Başlanğıc tarix"
-            ></select>
-            <select
-              className="finance-select"
-              name=""
-              id=""
+              className="select-time"
+              onChange={(e) => setStartDate(`${e.$D}-${e.$M + 1}-${e.$y}`)}
+              format="DD-MM-YYYY"
+            />
+            <DatePicker
               placeholder="Son tarix"
-            ></select>
+              className="select-time"
+              onChange={(e) => setEndDate(`${e.$D}-${e.$M + 1}-${e.$y}`)}
+              format="DD-MM-YYYY"
+            />
             <select
               className="finance-select"
-              name=""
-              id=""
-              placeholder="Ə/H növü"
-            ></select>
+              name="salaryStyle"
+              value={formik.values.salaryStyle}
+              placeholder="Ə/H statusu"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            >
+               <option key={"salary-type-1"} value="Fix">
+                  Fix
+                </option>
+                <option key={"salary-type-2"} value="Fix%2BKommissiya">
+                  Fix+Kommissiya
+                </option>
+                <option key={"salary-type-3"} value="Kommissiya">
+                  Kommissiya
+                </option>
+            </select>
             <div className="finance-delete">
               <button type="submit" className="search-button">
                 Axtar
@@ -198,6 +318,7 @@ const FinanceAndInstallment = () => {
               <button className="delete-button">Təmizlə</button>
             </div>
           </div>
+        </form>
         </Col>
       </Row>
     </div>

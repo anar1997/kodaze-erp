@@ -42,8 +42,8 @@
     width: 180px;
 }
 
-.advance-input input:hover{
-    border: none;
+.advance-div input:focus{
+    outline: none;
 }
 
 .advance-div-2{
