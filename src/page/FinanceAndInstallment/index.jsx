@@ -7,8 +7,7 @@ import { Link } from "react-router-dom";
 import PageArea from "../../component/Area";
 import PageHeader from "../../component/Header";
 import {
-  filterSalaryViewsAsync,
-  getSalaryViewsAsync,
+  filterSalaryViewsAsync
 } from "../../redux/slices/Financeİnstallment/salaryViewsSlice";
 import { getCompanyAsync } from "../../redux/slices/humanResourcesSlices/companySlice";
 import { getOfficeAsync } from "../../redux/slices/humanResourcesSlices/officeSlice";
@@ -65,7 +64,7 @@ const FinanceAndInstallment = () => {
     dispatch(getOfficeAsync());
     dispatch(getPositionAsync());
     dispatch(filterSalaryViewsAsync(filteredValues))
-  }, [dispatch]);
+  }, [dispatch, formik.values]);
 
   return (
     <div>

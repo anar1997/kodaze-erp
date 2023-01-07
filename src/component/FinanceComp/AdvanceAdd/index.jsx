@@ -22,17 +22,17 @@ const AdvanceAdd = () => {
 
   const dispatch = useDispatch();
 
-  const formik = useFormik({
-    initialValues: {
-      employee_id: "",
-      note: "",
-      date: "",
-      amount: ""
-    },
-    onSubmit: (values) => {
-      dispatch(postUserAsync(values))
-    }
-  })
+  // const formik = useFormik({
+  //   initialValues: {
+  //     employee_id: "",
+  //     note: "",
+  //     date: "",
+  //     amount: ""
+  //   },
+  //   onSubmit: (values) => {
+  //     dispatch(postUserAsync(values))
+  //   }
+  // })
   return (
     <div className="advance-add">
       <p>Avans əlavə etmək üçün aşağıdakı sətirləri doldurun.</p>

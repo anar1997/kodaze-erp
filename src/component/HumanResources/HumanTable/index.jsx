@@ -65,7 +65,7 @@ const HumanTable = () => {
     dispatch(getOfficeAsync());
     dispatch(getPositionAsync());
     dispatch(filterWorkGraphicAsync(filteredValues));
-  }, [dispatch]);
+  }, [dispatch, formik.values]);
 
   return (
     <div>
