@@ -6,7 +6,7 @@ import Main from "./page/MainPage";
 import reportWebVitals from "./reportWebVitals";
 import store from "./redux/store";
 import { Provider } from "react-redux";
-import LoginPage from "./page/Login";
+// import LoginPage from "./page/Login";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

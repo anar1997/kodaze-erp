@@ -36,7 +36,7 @@ const LoginPage = () => {
     if (access != null) {
       navigate("/");
     }
-  }, [navigate]);
+  }, [navigate, access]);
   return (
     <div className="login">
       <form onSubmit={formik.handleSubmit}>

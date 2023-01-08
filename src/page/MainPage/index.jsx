@@ -43,7 +43,7 @@ const Main = () => {
   let { pathname } = location;
   const [collapsed, setCollapsed] = useState(false);
 
-  const isLoggedIn = useSelector((state) => state.login.isLoggedIn);
+  // const isLoggedIn = useSelector((state) => state.login.isLoggedIn);
 
   const isLogin = localStorage.getItem("access");
 
