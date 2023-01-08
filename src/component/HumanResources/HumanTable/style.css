@@ -96,8 +96,6 @@
   margin-right: 20px !important;
 }
 
-
-
 .humantable-link-2{
     color: white;
 }
@@ -127,12 +125,17 @@
   border-bottom: 1px solid #b4b4b4;  
   border-radius: 0;
   margin-top: 15px !important;
+  padding-left: 3px;
+  padding-bottom: 0;
+  color: gray;
 }
 
-/* .search-personal-2:hover{
-  border-color: ;
-} */
+
+.search-personal-2:hover{
+  border-color: #b4b4b4 !important;
+}
 
 .search-personal-2:focus{
   outline: none;
+  border: none !important;
 }

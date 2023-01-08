@@ -11,6 +11,7 @@ import positionSlice from "./slices/humanResourcesSlices/positionSlice";
 import regionSlice from "./slices/humanResourcesSlices/regionSlice";
 import userSlice from "./slices/humanResourcesSlices/userSlice";
 import workGraphicSlice from "./slices/humanResourcesSlices/workGraphicSlice";
+import loginSlice from "./slices/loginSlice";
 
 
 export default configureStore({
@@ -26,6 +27,7 @@ export default configureStore({
         monthRange: monthRangeSlice,
         holiday: holidaySlice,
         permission: permissionSlice,
-        salaryView: salaryViewsSlice
+        salaryView: salaryViewsSlice,
+        login: loginSlice,
     }
 })
