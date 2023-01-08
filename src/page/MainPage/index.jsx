@@ -33,7 +33,7 @@ import BonusAdd from "../../component/FinanceComp/BonusAdd";
 import FineAdd from "../../component/FinanceComp/FineAdd";
 import InterruptionAdd from "../../component/FinanceComp/InterruptionAdd";
 import PaySalary from "../../component/FinanceComp/PaySalary";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import LoginPage from "../Login";
 
 const { Content, Sider } = Layout;
