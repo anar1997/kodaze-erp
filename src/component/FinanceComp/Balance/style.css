@@ -1,0 +1,14 @@
+.balance-row{
+    margin-left: 40px !important;
+    margin-top: 50px !important;
+}
+
+.balance-row col{
+    margin-left: 55px !important;
+}
+
+.card-1{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px !important;
+}

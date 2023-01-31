@@ -1,0 +1,93 @@
+.holding-operation{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 600px !important;
+    height: 500px !important;
+    margin-left: 250px !important;
+    margin-top: 150px !important;
+    margin-bottom: 40px !important;
+}
+
+.holding-operation-arrow{
+    font-size: 40px !important;
+    color: #073763;
+}
+
+.holding-operation-blank{
+    margin-top: 20px !important;
+}
+
+.holding-operation-parametr {
+    width: 320px !important;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px !important;
+    margin-left: 130px !important;
+  }
+  
+  .holding-operation-parametr label {
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .holding-operation-parametr textarea{
+    margin-top: 10px !important;
+  }
+  
+  .holding-operation-select {
+    border: none;
+    border-bottom: 2px solid #e6e6e6;
+    width: 220px;
+  }
+  
+  .holding-operation-select:focus {
+    outline: none;
+  }
+  
+  .holding-operation-button{
+      margin-top: 70px !important;
+      margin-right: 20px !important;
+      display: flex;
+      justify-content: flex-end;
+  }
+  
+  .holding-operation-button-1{
+      background-color: #98B0C7;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 40px;
+      width: 105px;
+      height: 40px;
+      border: none;
+      padding-top: 8px !important;
+      margin-right: 15px !important;
+      display: inline-block;
+  }
+  
+  .holding-operation-button-1:hover{
+      color: white;
+      cursor: pointer;
+  }
+  
+  .holding-operation-button-2{
+      background-color: #21D25C;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 40px;
+      width: 105px;
+      height: 40px;
+      border: none;
+      padding-top: 7px !important;
+      padding-bottom: 8px !important;
+      margin-right: 20px !important;
+      display: inline-block;
+  }
+  

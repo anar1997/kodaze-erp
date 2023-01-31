@@ -90,6 +90,11 @@
   outline: none;
 }
 
+.finance-personal::placeholder{
+  color: #cccccc;
+  font-weight: lighter;
+}
+
 .finance-select{
   border: none;
   border-bottom: 1px solid #b4b4b4;  
@@ -101,6 +106,11 @@
 
 .finance-select:focus{
   outline: none;
+}
+
+.finance-select::placeholder{
+  color: #cccccc;
+  font-weight: 100 !important;
 }
 
 .finance-delete{

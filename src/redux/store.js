@@ -1,5 +1,20 @@
 import { configureStore } from "@reduxjs/toolkit";
+import advanceAddSlice from "./slices/Financeİnstallment/advanceAddSlice";
+import bonusAddSlice  from "./slices/Financeİnstallment/bonusAddSlice";
+import checkoutOperationsSlice from "./slices/Financeİnstallment/checkoutOperationsSlice";
+import companyCashboxSlice from "./slices/Financeİnstallment/companyCashboxSlice";
+import companyOperationSlice from "./slices/Financeİnstallment/companyOperationSlice";
+import fineAddSlice from "./slices/Financeİnstallment/fineAddSlice";
+import holdingCashboxSlice from "./slices/Financeİnstallment/holdingCashboxSlice";
+import holdingOperationSlice from "./slices/Financeİnstallment/holdingOperationSlice";
+import interruptionAddSlice from "./slices/Financeİnstallment/interruptionAddSlice";
+import officeCashboxSlice from "./slices/Financeİnstallment/officeCashboxSlice";
+import paymentTrackingSlice from "./slices/Financeİnstallment/paymentTrackingSlice";
+import paySalarySlice from "./slices/Financeİnstallment/paySalarySlice";
 import salaryViewsSlice from "./slices/Financeİnstallment/salaryViewsSlice";
+import companyOfficeSlice from "./slices/Financeİnstallment/Transfer/companyOfficeSlice";
+import  holdingCompanySlice  from "./slices/Financeİnstallment/Transfer/holdingCompanySlice";
+import officesSlice from "./slices/Financeİnstallment/Transfer/officesSlice";
 import  commissionSlice  from "./slices/humanResourcesSlices/commissionSlice";
 import companySlice from "./slices/humanResourcesSlices/companySlice";
 import departamentSlice from "./slices/humanResourcesSlices/departamentSlice";
@@ -29,5 +44,20 @@ export default configureStore({
         permission: permissionSlice,
         salaryView: salaryViewsSlice,
         login: loginSlice,
+        holdingCompany: holdingCompanySlice,
+        companyOffice: companyOfficeSlice,
+        offices: officesSlice,
+        paymentTracking: paymentTrackingSlice,
+        checkoutOperations: checkoutOperationsSlice,
+        advanceAdd: advanceAddSlice,
+        bonusAdd: bonusAddSlice,
+        fineAdd: fineAddSlice,
+        interruptionAdd: interruptionAddSlice,
+        paySalary: paySalarySlice,
+        companyOperation: companyOperationSlice,
+        holdingOperation: holdingOperationSlice,
+        holdingCashbox: holdingCashboxSlice,
+        companyCashbox: companyCashboxSlice,
+        officeCashbox: officeCashboxSlice,
     }
 })

@@ -34,9 +34,9 @@ const Commisions = () => {
       <PageHeader name="İnsan resursları/İş qrafiki" />
       <PageArea
         menu={[
-          { name: "İşçilər", link: "/human-resources" },
-          { name: "İş Qrafiki", link: "/human-resources/work-graphic" },
-          { name: "Kommissiyalar", link: "/human-resources/commissions" },
+          { name: "İşçilər", link: "/human-resources", isDropdown: false },
+          { name: "İş Qrafiki", link: "/human-resources/work-graphic", isDropdown: false },
+          { name: "Kommissiyalar", link: "/human-resources/commissions", isDropdown: false },
         ]}
       />
         <Link className="commissions-button" to="commission-add">

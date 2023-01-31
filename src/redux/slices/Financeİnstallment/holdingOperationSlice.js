@@ -1,17 +1,17 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "../../../axios";
 
-export const postAdvanceAddAsync = createAsyncThunk('advanceAddAsync', async (data, {rejectWithValue})=>{
+export const postHoldingOperationAsync = createAsyncThunk('holdingOperationsAsync', async(data, {rejectWithValue})=>{
     try {
-        const res = await axios.post('salaries/advancepayment/', data)
+        const res = await axios.post('cashbox/holding-cashbox-operation/', data)
         return res.data
     } catch (error) {
-        return  rejectWithValue(error.response.data)
+        return rejectWithValue(error.response.data)        
     }
 })
 
-export const advanceAddSlice = createSlice({
-    name: "advanceAdd",
+export const holdingOperationSlice = createSlice({
+    name: 'holdingOperation',
     initialState: {
         data: [],
         isLoading: false,
@@ -20,17 +20,15 @@ export const advanceAddSlice = createSlice({
     },
     reducers: {},
     extraReducers: {
-        [postAdvanceAddAsync.pending]: (state, action)=>{
+        [postHoldingOperationAsync.pending]: (state, action)=>{
             state.isLoading = true
         },
-        [postAdvanceAddAsync.fulfilled]: (state, action)=>{
+        [postHoldingOperationAsync.fulfilled]: (state, action)=>{
             state.isLoading = false
-            console.log(state.payload);
             state.success = action.payload.detail
             state.error = null
         },
-        [postAdvanceAddAsync.rejected]: (state, action)=>{
-            console.log('xeta cixdi'); 
+        [postHoldingOperationAsync.rejected]: (state, action)=>{
             state.isLoading = false
             state.error = action.payload.detail;
             state.success = null;
@@ -38,4 +36,4 @@ export const advanceAddSlice = createSlice({
     }
 })
 
-export default advanceAddSlice.reducer;
+export default holdingOperationSlice.reducer;

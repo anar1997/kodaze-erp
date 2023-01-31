@@ -1,0 +1,126 @@
+.advance-add{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 700px !important;
+    height: 600px !important;
+    margin-left: 150px !important;
+    margin-top: 40px !important;
+    margin-bottom: 10px !important;
+}
+
+.advance-add p{
+    font-weight: bolder;
+    font-size: 25px;
+    text-align: center;
+    /* width: 700px !important; */
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.advance-div{
+    width: 330px !important;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px !important;
+    margin-left: 160px !important;
+}
+
+.advance-div label{
+    font-weight: bolder;
+    font-size: large;
+}
+
+.advance-div input{
+    border: none;
+    border-bottom: 2px solid #e6e6e6;
+    width: 180px;
+}
+
+.advance-div input:focus{
+    outline: none;
+}
+
+.advance-div-2{
+    width: 330px !important;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px !important;
+    margin-left: 160px !important;
+}
+
+.advance-div-2 label{
+    font-weight: bolder;
+    font-size: large;
+}
+
+.advance-div-2 input{
+    border: none;
+    width: 180px;
+    margin-left: 100px !important;
+}
+
+.advance-note{
+    width: 330px !important;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 160px !important;
+    margin-top: 20px !important;
+}
+
+.advance-note label{
+    font-weight: bolder;
+    font-size: large;
+    margin-bottom: 10px !important
+}
+
+.advance-button{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 55px !important;
+}
+
+.advance-button-1{
+    background-color: #98b0c7;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 40px;
+    padding-top: 8px !important;
+    width: 105px;
+    height: 40px;
+    border: none;
+    margin-right: 20px !important;
+}
+
+.advance-button-1:hover{
+    color: white;
+}
+
+
+.advance-button-2{
+    background-color: #21d25c;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 40px;
+    /* padding-top: 8px !important; */
+    width: 105px;
+    height: 40px;
+    border: none;
+    margin-right: 20px !important;
+}
+
+.advance-button-2:hover{
+    color: white;
+}
+
+.advance-date{
+    border: none;
+}

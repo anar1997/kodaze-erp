@@ -28,14 +28,25 @@ import Commisions from "../../component/HumanResources/Commissions";
 import CommissionAdd from "../../component/HumanResources/CommissionAdd";
 import HolidayAdd from "../../component/HumanResources/HolidayAdd";
 import PermissionAdd from "../../component/HumanResources/PermissionAdd";
-import AdvanceAdd from "../../component/FinanceComp/AdvanceAdd";
-import BonusAdd from "../../component/FinanceComp/BonusAdd";
-import FineAdd from "../../component/FinanceComp/FineAdd";
-import InterruptionAdd from "../../component/FinanceComp/InterruptionAdd";
-import PaySalary from "../../component/FinanceComp/PaySalary";
+import AdvanceAdd from "../../component/FinanceComp/Salary/AdvanceAdd";
+import BonusAdd from "../../component/FinanceComp/Salary/BonusAdd";
+import FineAdd from "../../component/FinanceComp/Salary/FineAdd";
+import InterruptionAdd from "../../component/FinanceComp/Salary/InterruptionAdd";
+import PaySalary from "../../component/FinanceComp/Salary/PaySalary";
 // import { useSelector } from "react-redux";
 import LoginPage from "../Login";
-
+import Balance from "../../component/FinanceComp/Balance";
+import PaymentTracking from "../../component/FinanceComp/PaymentTracking";
+import CheckoutOperations from "../../component/FinanceComp/CheckoutOperations";
+import CompanyOperation from "../../component/FinanceComp/CheckoutOperations/CompanyOperation";
+import HoldingOperation from "../../component/FinanceComp/CheckoutOperations/HoldingOperation";
+import HoldingCompany from "../../component/FinanceComp/Transfer/HoldingCompany";
+import Offices from "../../component/FinanceComp/Transfer/Offices";
+import CompanyOffice from "../../component/FinanceComp/Transfer/CompanyOffice";
+import TransferedCompany from "../../component/FinanceComp/Transfer/TransferedCompany";
+import TransferedOffice from "../../component/FinanceComp/Transfer/TransferedOffice";
+import TransferedOffices from "../../component/FinanceComp/Transfer/TransferedOffices";
+import OceanBalance from "../../component/FinanceComp/Balance/OceanBalance";
 const { Content, Sider } = Layout;
 
 const Main = () => {
@@ -224,6 +235,28 @@ const Main = () => {
                     element={<InterruptionAdd />}
                   />
                   <Route path="pay-salary" element={<PaySalary />} />
+                  <Route path="balance" element={<Outlet />}>
+                    <Route path="" element={<Balance />}/>
+                    <Route path="ocean-balance" element={<OceanBalance/>}/>
+                  </Route>
+                  <Route path="payment-tracking" element={<PaymentTracking/>}/>
+                  <Route path="checkout-operations">
+                    <Route path="" element={<CheckoutOperations/>}/>
+                    <Route path="company-operation" element={<CompanyOperation/>}/>
+                    <Route path="holding-operation" element={<HoldingOperation/>}/>
+                  </Route>
+                  <Route path="holding-company-transfer" element={<Outlet/>}>
+                    <Route path="" element={<HoldingCompany/>}/>
+                    <Route path="transfered-company" element={<TransferedCompany/>}/>
+                  </Route>
+                  <Route path="offices-transfer" element={<Outlet/>}>
+                    <Route path="" element={<Offices/>}/>
+                    <Route path="transfered-offices" element={<TransferedOffices/>}/>
+                  </Route>
+                  <Route path="company-office-transfer" element={<Outlet/>}>
+                    <Route path="" element={<CompanyOffice/>}/>
+                    <Route path="transfered-office" element={<TransferedOffice/>}/>
+                  </Route>
                 </Route>
                 <Route path="/" element={<HomePage />} />
                 <Route path="service" element={<Service />} />

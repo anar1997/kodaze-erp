@@ -1,0 +1,13 @@
+.cash-div{
+    width: 400px !important;
+    height: 200px !important;
+    background-color: #073763;
+    border-radius: 10px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.props-name{
+    color: white;
+}

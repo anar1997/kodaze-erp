@@ -6,9 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import PageArea from "../../component/Area";
 import PageHeader from "../../component/Header";
-import {
-  filterSalaryViewsAsync
-} from "../../redux/slices/Financeİnstallment/salaryViewsSlice";
+import Success from "../../component/Success";
+import { filterSalaryViewsAsync } from "../../redux/slices/Financeİnstallment/salaryViewsSlice";
 import { getCompanyAsync } from "../../redux/slices/humanResourcesSlices/companySlice";
 import { getOfficeAsync } from "../../redux/slices/humanResourcesSlices/officeSlice";
 import { getPositionAsync } from "../../redux/slices/humanResourcesSlices/positionSlice";
@@ -28,6 +27,21 @@ const FinanceAndInstallment = () => {
   let company = useSelector((state) => state.company.data);
   let office = useSelector((state) => state.office.data);
   let position = useSelector((state) => state.position.data);
+  let successAdvance = useSelector((state)=>state.advanceAdd.success)
+  let successBonus = useSelector((state)=>state.bonusAdd.success)
+  let successFine = useSelector((state)=>state.fineAdd.success)
+  let successInterruption = useSelector((state)=>state.interruptionAdd.success)
+  let successPaySalary = useSelector((state)=>state.paySalary.success)
+
+  // const toggleChecked = (id) => {
+  //   const newChecked = [...check];
+  //   if (newChecked.includes(id)) {
+  //     newChecked.splice(newChecked.indexOf(id), 1);
+  //   }else {
+  //     newChecked.push(id)
+  //   }
+  //   setCheck(newChecked);
+  // }
 
   const formik = useFormik({
     initialValues: {
@@ -63,7 +77,7 @@ const FinanceAndInstallment = () => {
     dispatch(getCompanyAsync());
     dispatch(getOfficeAsync());
     dispatch(getPositionAsync());
-    dispatch(filterSalaryViewsAsync(filteredValues))
+    dispatch(filterSalaryViewsAsync(filteredValues));
   }, [dispatch, formik.values]);
 
   return (
@@ -71,15 +85,53 @@ const FinanceAndInstallment = () => {
       <PageHeader name="Mühasibat/Əməkhaqqı" />
       <PageArea
         menu={[
-          { name: "Əməkhaqqı", link: "/finance-and-installment" },
-          { name: "Balans", link: "" },
-          { name: "Transfer", link: "" },
-          { name: "Ödəniş izləmə", link: "" },
-          { name: "Kassa Hərəkətləri", link: "" },
+          {
+            name: "Əməkhaqqı",
+            link: "/finance-and-installment",
+            isDropdown: false,
+          },
+          {
+            name: "Balans",
+            link: "/finance-and-installment/balance",
+            isDropdown: false,
+          },
+          {
+            name: "Transfer",
+            childElement: [
+              {
+                name: "Holding Şirkət arası transfer",
+                link: "/finance-and-installment/holding-company-transfer",
+              },
+              {
+                name: "Şirkət ofis arası transfer",
+                link: "/finance-and-installment/company-office-transfer",
+              },
+              {
+                name: "Ofislər arası transfer",
+                link: "/finance-and-installment/offices-transfer",
+              },
+            ],
+            isDropdown: true,
+          },
+          {
+            name: "Ödəniş izləmə",
+            link: "/finance-and-installment/payment-tracking",
+            isDropdown: false,
+          },
+          {
+            name: "Kassa Hərəkətləri",
+            link: "/finance-and-installment/checkout-operations",
+            isDropdown: false,
+          },
         ]}
       />
       <Row>
         <Col span={20}>
+          {successAdvance && <Success message={successAdvance}/>}
+          {successBonus && <Success message={successBonus}/>}
+          {successFine && <Success message={successFine}/>}
+          {successInterruption && <Success message={successInterruption}/>}
+          {successPaySalary && <Success message={successPaySalary}/>}
           <table className="finance-table">
             <thead>
               <tr>
@@ -109,7 +161,9 @@ const FinanceAndInstallment = () => {
                 <tr key={"working_day" + v.id}>
                   <td className="finance-check">
                     <input
-                      onChange={() => setCheck([...check, v.id])}
+                      // checked={check.includes(v.id)}
+                      onChange={() => setCheck([...check, v])}
+                      // onChange={(e) => console.log(e)}
                       type="checkbox"
                     />
                   </td>
@@ -122,12 +176,8 @@ const FinanceAndInstallment = () => {
                     {v.extra_data.total_working_day}
                   </td>
                   <td className="finance-cell-5a">{v.employee.salary}</td>
-                  <td className="finance-cell-5a">
-                    {v.sale_quantity}
-                  </td>
-                  <td className="finance-cell-5a">
-                    {v.commission_amount}
-                  </td>
+                  <td className="finance-cell-5a">{v.sale_quantity}</td>
+                  <td className="finance-cell-5a">{v.commission_amount}</td>
                   <td className="finance-cell-5a">
                     {v.extra_data.total_bonus}
                   </td>
@@ -140,43 +190,62 @@ const FinanceAndInstallment = () => {
                   <td className="finance-cell-5a">
                     {v.extra_data.total_salarypunishment}
                   </td>
-                  <td className="finance-cell-5a">
-                    {v.final_salary}
-                  </td>
+                  <td className="finance-cell-5a">{v.final_salary}</td>
                   <td className="finance-cell-5a">{v.pay_date}</td>
-                    {v.is_done ? (
-                       <td className="finance-cell-6a" style={{color: "green"}}>
-                        Ödənilib
-                       </td>
-                    ) : (
-                      <td className="finance-cell-6a" style={{color: "red"}}>
-                        Ödənilməyib
-                      </td>
-                    )}
-                 
+                  {v.is_done ? (
+                    <td className="finance-cell-6a" style={{ color: "green" }}>
+                      Ödənilib
+                    </td>
+                  ) : (
+                    <td className="finance-cell-6a" style={{ color: "red" }}>
+                      Ödənilməyib
+                    </td>
+                  )}
                 </tr>
               ))}
             </tbody>
           </table>
 
           <div className="finance-button">
-            <Link className="finance-link-1" to="advance-add">
+            <Link
+              className="finance-link-1"
+              to={check.length > 0 && check.length < 2 ? "advance-add" : "#"}
+              state={{ employee: check }}
+            >
               Avans əlavə et
             </Link>
 
-            <Link className="finance-link-1" to="bonus-add">
+            <Link
+              className="finance-link-1"
+              to={check.length > 0 && check.length < 2 ? "bonus-add" : "#"}
+              state={{ employee: check }}
+            >
               Bonus əlavə et
             </Link>
 
-            <Link className="finance-link-1" to="fine-add">
+            <Link
+              className="finance-link-1"
+              to={check.length > 0 && check.length < 2 ? "fine-add" : "#"}
+              state={{ employee: check }}
+            >
               Cərimə əlavə et
             </Link>
 
-            <Link className="finance-link-1" to="interruption-add">
+            <Link
+              className="finance-link-1"
+              to={
+                check.length > 0 && check.length < 2 ? "interruption-add" : "#"
+              }
+              state={{ employee: check }}
+            >
               Kəsinti əlavə et
             </Link>
 
-            <Link className="finance-link-2" to="pay-salary">
+            <Link
+              className="finance-link-2"
+              to="pay-salary"
+              state={{ employee: check }}
+            >
               Ə/H ödə
             </Link>
           </div>
@@ -194,113 +263,113 @@ const FinanceAndInstallment = () => {
 
         <Col span={4}>
           <form action="" onSubmit={formik.handleSubmit}>
-          <div className="finance-search">
-            <h3>Ətraflı Axtar</h3>
-            <input
-              type="text"
-              className="finance-personal"
-              placeholder="Əməkdaş axtar"
-              name="fullname"
-              value={formik.values.fullname}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-            />
-            <select
-              className="finance-select"
-              name="company"
-              placeholder="Şirkət"
-              value={formik.values.company}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-            >
-              <option disabled={true} value="">
-                Şirkət
-              </option>
-              {company.map((v, i) => (
-                <option key={"company" + v.id} value={v.id}>
-                  {v.name}
+            <div className="finance-search">
+              <h3>Ətraflı Axtar</h3>
+              <input
+                type="text"
+                className="finance-personal"
+                placeholder="Əməkdaş axtar"
+                name="fullname"
+                value={formik.values.fullname}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+              <select
+                className="finance-select"
+                name="company"
+                placeholder="Şirkət"
+                value={formik.values.company}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              >
+                <option disabled={true} value="">
+                  Şirkət
                 </option>
-              ))}
-            </select>
-            <select
-              className="finance-select"
-              name="office"
-              placeholder="Ofis"
-              value={formik.values.office}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-            >
-              <option value="" disabled hidden>
-                Ofis
-              </option>
-              {office.map((v, i) => (
-                <option key={"office" + v.id} value={v.id}>
-                  {v.name}
+                {company.map((v, i) => (
+                  <option key={"company" + v.id} value={v.id}>
+                    {v.name}
+                  </option>
+                ))}
+              </select>
+              <select
+                className="finance-select"
+                name="office"
+                placeholder="Ofis"
+                value={formik.values.office}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              >
+                <option value="" disabled hidden>
+                  Ofis
                 </option>
-              ))}
-            </select>
-            <select
-              className="finance-select"
-              name="position"
-              placeholder="Vəzifə"
-              value={formik.values.position}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-            >
-              <option value="" disabled hidden>
-                Vəzifə
-              </option>
-              {position.map((v, i) => (
-                <option key={"position" + v.id} value={v.id}>
-                  {v.name}
+                {office.map((v, i) => (
+                  <option key={"office" + v.id} value={v.id}>
+                    {v.name}
+                  </option>
+                ))}
+              </select>
+              <select
+                className="finance-select"
+                name="position"
+                placeholder="Vəzifə"
+                value={formik.values.position}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              >
+                <option value="" disabled hidden>
+                  Vəzifə
                 </option>
-              ))}
-            </select>
-            <select
-              className="finance-select"
-              name="isActive"
-              placeholder="İşçi statusu"
-              value={formik.values.isActive}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-            >
-               <option key={"worker-status-1"} value={true}>
+                {position.map((v, i) => (
+                  <option key={"position" + v.id} value={v.id}>
+                    {v.name}
+                  </option>
+                ))}
+              </select>
+              <select
+                className="finance-select"
+                name="isActive"
+                placeholder="İşçi statusu"
+                value={formik.values.isActive}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              >
+                <option key={"worker-status-1"} value={true}>
                   Aktiv
                 </option>
                 <option key={"worker-status-2"} value={false}>
                   Passiv
                 </option>
-            </select>
-            <input
-              className="finance-select"
-              name="saleQuantity"
-              placeholder="Satış sayı"
-              type="number"
-              value={formik.values.saleQuantity}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-            />
-            <DatePicker
-              placeholder="Başlanğıc tarix"
-              className="select-time"
-              onChange={(e) => setStartDate(`${e.$D}-${e.$M + 1}-${e.$y}`)}
-              format="DD-MM-YYYY"
-            />
-            <DatePicker
-              placeholder="Son tarix"
-              className="select-time"
-              onChange={(e) => setEndDate(`${e.$D}-${e.$M + 1}-${e.$y}`)}
-              format="DD-MM-YYYY"
-            />
-            <select
-              className="finance-select"
-              name="salaryStyle"
-              value={formik.values.salaryStyle}
-              placeholder="Ə/H statusu"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-            >
-               <option key={"salary-type-1"} value="Fix">
+              </select>
+              <input
+                className="finance-select"
+                name="saleQuantity"
+                placeholder="Satış sayı"
+                type="number"
+                value={formik.values.saleQuantity}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+              <DatePicker
+                placeholder="Başlanğıc tarix"
+                className="select-time"
+                onChange={(e) => setStartDate(`${e.$D}-${e.$M + 1}-${e.$y}`)}
+                format="DD-MM-YYYY"
+              />
+              <DatePicker
+                placeholder="Son tarix"
+                className="select-time"
+                onChange={(e) => setEndDate(`${e.$D}-${e.$M + 1}-${e.$y}`)}
+                format="DD-MM-YYYY"
+              />
+              <select
+                className="finance-select"
+                name="salaryStyle"
+                value={formik.values.salaryStyle}
+                placeholder="Ə/H statusu"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              >
+                <option key={"salary-type-1"} value="Fix">
                   Fix
                 </option>
                 <option key={"salary-type-2"} value="Fix%2BKommissiya">
@@ -309,15 +378,15 @@ const FinanceAndInstallment = () => {
                 <option key={"salary-type-3"} value="Kommissiya">
                   Kommissiya
                 </option>
-            </select>
-            <div className="finance-delete">
-              <button type="submit" className="search-button">
-                Axtar
-              </button>
-              <button className="delete-button">Təmizlə</button>
+              </select>
+              <div className="finance-delete">
+                <button type="submit" className="search-button">
+                  Axtar
+                </button>
+                <button className="delete-button">Təmizlə</button>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
         </Col>
       </Row>
     </div>

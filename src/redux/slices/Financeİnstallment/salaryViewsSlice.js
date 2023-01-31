@@ -12,12 +12,12 @@ export const filterSalaryViewsAsync = createAsyncThunk('filterSalaryViews', asyn
 })
 
 export const salaryViewsSlice = createSlice({
-    name: "salaryViews",
+    name: "salaryViews",    
     initialState: {
         data: [],
         isLoading: false,
         error: null,
-        totalPage: 0,
+        totalPage: 0,   
         pageLimit: 20
     },
     reducers: {},

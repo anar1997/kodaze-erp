@@ -1,0 +1,40 @@
+.transfer-link{
+    background-color: #24619a;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 40px;
+    width: 135px;
+    height: 40px;
+    border: none;
+    padding-top: 8px !important;
+    margin-right: 20px !important;
+    display: inline-block;
+    margin-top: 40px !important;
+    margin-left: 40px !important;
+}
+
+.transfer-link:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.offices-table{
+    border: 1px solid #e0e0e0;
+    border-collapse: collapse;
+    /* max-width: 580px !important; */
+    margin-left: 40px !important;
+    margin-top: 50px !important;
+}
+
+.offices-table th{
+    border: 1px solid #e0e0e0;
+    border-collapse: collapse;
+    padding: 3px !important;
+}
+
+.offices-table td {
+    border: 1px solid #e0e0e0;
+    border-collapse: collapse;
+    padding: 5px !important;
+  }
