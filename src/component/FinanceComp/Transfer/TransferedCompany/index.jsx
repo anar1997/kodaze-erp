@@ -1,9 +1,9 @@
 import { useFormik } from "formik";
-import React, { useState } from "react";
+import React from "react";
 import { useEffect } from "react";
 import { IoArrowBack } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { postHoldingCompanyAsync } from "../../../../redux/slices/Financeİnstallment/Transfer/holdingCompanySlice";
 import { getCompanyAsync } from "../../../../redux/slices/humanResourcesSlices/companySlice";
 import Error from "../../../Error";
