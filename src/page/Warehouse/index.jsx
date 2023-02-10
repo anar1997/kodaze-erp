@@ -7,7 +7,7 @@ import PageArea from "../../component/Area";
 import PageHeader from "../../component/Header";
 import { getCompanyAsync } from "../../redux/slices/humanResourcesSlices/companySlice";
 import { getOfficeAsync } from "../../redux/slices/humanResourcesSlices/officeSlice";
-import { filterWarehouseAsync, getWarehouseAsync } from "../../redux/slices/Warehouse/warehouseSlice";
+import { filterWarehouseAsync } from "../../redux/slices/Warehouse/warehouseSlice";
 import "./style.css";
 
 const Warehouse = () => {

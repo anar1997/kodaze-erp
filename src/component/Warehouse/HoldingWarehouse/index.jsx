@@ -6,7 +6,7 @@ import { Col, Pagination, Row } from "antd";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { filterHoldingWarehouseAsync, getHoldingWarehouseAsync } from "../../../redux/slices/Warehouse/holdingWarehouseSlice";
+import { filterHoldingWarehouseAsync } from "../../../redux/slices/Warehouse/holdingWarehouseSlice";
 import { useFormik } from "formik";
 
 const HoldingWarehouse = () => {

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./style.css";
-import { forwardRef, useState } from "react";
+import {  useState } from "react";
 import { DatePicker } from "antd";
 import "react-datepicker/dist/react-datepicker.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -18,15 +18,15 @@ const BonusAdd = () => {
 
   const error = useSelector((state) => state.bonusAdd.error);
 
-  const ExampleCustomInput = forwardRef(({ value, onClick, onChange }, ref) => (
-    <input
-      value={value}
-      className="example-custom-input"
-      onClick={onClick}
-      onChange={onChange}
-      ref={ref}
-    />
-  ));
+  // const ExampleCustomInput = forwardRef(({ value, onClick, onChange }, ref) => (
+  //   <input
+  //     value={value}
+  //     className="example-custom-input"
+  //     onClick={onClick}
+  //     onChange={onChange}
+  //     ref={ref}
+  //   />
+  // ));
 
   const dispatch = useDispatch();
 
@@ -57,7 +57,7 @@ const BonusAdd = () => {
 
   useEffect(() => {
     console.log(employee);
-  }, []);
+  }, [employee]);
 
   return (
     <form action="" onSubmit={formik.handleSubmit}>

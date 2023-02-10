@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
-import { forwardRef, useState } from "react";
-import { Button, DatePicker } from "antd";
+import { useState } from "react";
+import { DatePicker } from "antd";
 import "react-datepicker/dist/react-datepicker.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
@@ -21,15 +21,15 @@ const AdvanceAdd = () => {
   //   date: yup.date().required("Tarix mütləq daxil edilməlidir!"),
   // });
 
-  const ExampleCustomInput = forwardRef(({ value, onClick, onChange }, ref) => (
-    <input
-      value={value}
-      className="example-custom-input"
-      onClick={onClick}
-      onChange={onChange}
-      ref={ref}
-    />
-  ));
+  // const ExampleCustomInput = forwardRef(({ value, onClick, onChange }, ref) => (
+  //   <input
+  //     value={value}
+  //     className="example-custom-input"
+  //     onClick={onClick}
+  //     onChange={onChange}
+  //     ref={ref}
+  //   />
+  // ));
 
   let error = useSelector((state)=>state.advanceAdd.error)
   const dispatch = useDispatch();
@@ -66,7 +66,7 @@ const AdvanceAdd = () => {
 
   useEffect(() => {
     console.log(employee);
-  }, []);
+  }, [employee]);
   return (
     <form action="" onSubmit={formik.handleSubmit}>
       {error && <Error message={error}/> }

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { filterCheckoutOperationsAsync, getCheckoutOperationsAsync } from "../../../redux/slices/Financeİnstallment/checkoutOperationsSlice";
+import { filterCheckoutOperationsAsync } from "../../../redux/slices/Financeİnstallment/checkoutOperationsSlice";
 import { getCompanyAsync } from "../../../redux/slices/humanResourcesSlices/companySlice";
 import { getOfficeAsync } from "../../../redux/slices/humanResourcesSlices/officeSlice";
 import PageArea from "../../Area";

@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { filterCompanyOfficeAsync, getCompanyOfficeAsync } from "../../../../redux/slices/Financeİnstallment/Transfer/companyOfficeSlice";
+import { filterCompanyOfficeAsync } from "../../../../redux/slices/Financeİnstallment/Transfer/companyOfficeSlice";
 import PageArea from "../../../Area";
 import PageHeader from "../../../Header";
 import "./style.css";
@@ -17,7 +17,6 @@ const CompanyOffice = () => {
   let data = useSelector((state) => state.companyOffice.data);
   let totalPage = useSelector((state)=>state.companyOffice.totalPage);
   let limitPage = useSelector((state)=>state.companyOffice.pageLimit);
-  let company = useSelector((state) => state.company.data);
   let office = useSelector((state) => state.office.data);
 
   const formik = useFormik({

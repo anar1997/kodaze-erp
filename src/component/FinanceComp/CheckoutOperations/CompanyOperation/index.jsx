@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { postCompanyOperationAsync } from "../../../../redux/slices/Financeİnstallment/companyOperationSlice";
 import { getCompanyAsync } from "../../../../redux/slices/humanResourcesSlices/companySlice";
-import { filterOfficesAsync, getOfficeAsync } from "../../../../redux/slices/humanResourcesSlices/officeSlice";
+import { filterOfficesAsync } from "../../../../redux/slices/humanResourcesSlices/officeSlice";
 import { getUsersAsync } from "../../../../redux/slices/humanResourcesSlices/userSlice";
 import Error from "../../../Error";
 import Success from "../../../Success";
@@ -22,7 +22,7 @@ const CompanyOperation = () => {
   let company = useSelector((state) => state.company.data);
   let office = useSelector((state) => state.office.data);
   let users = useSelector((state) => state.users.users)
-  let officeRef = useRef();
+  // let officeRef = useRef();
   let [errorCompany, setErrorCompany] = useState(null);
 
   let error = useSelector((state) => state.companyOperation.error);

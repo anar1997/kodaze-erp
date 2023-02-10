@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { filterHoldingCompanyAsync, getHoldingCompanyAsync } from "../../../../redux/slices/Financeİnstallment/Transfer/holdingCompanySlice";
+import { filterHoldingCompanyAsync } from "../../../../redux/slices/Financeİnstallment/Transfer/holdingCompanySlice";
 import { getCompanyAsync } from "../../../../redux/slices/humanResourcesSlices/companySlice";
 import PageArea from "../../../Area";
 import PageHeader from "../../../Header";

@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { filterPaymentTrackingAsync, getPaymentTrackingAsync } from "../../../redux/slices/Financeİnstallment/paymentTrackingSlice";
+import { filterPaymentTrackingAsync } from "../../../redux/slices/Financeİnstallment/paymentTrackingSlice";
 import { getCompanyAsync } from "../../../redux/slices/humanResourcesSlices/companySlice";
 import { getOfficeAsync } from "../../../redux/slices/humanResourcesSlices/officeSlice";
 import { getPositionAsync } from "../../../redux/slices/humanResourcesSlices/positionSlice";
@@ -23,7 +23,6 @@ const PaymentTracking = () => {
 
   let company = useSelector((state) => state.company.data);
   let office = useSelector((state) => state.office.data);
-  let position = useSelector((state) => state.position.data);
   let region = useSelector((state)=>state.region.data)
 
   const formik = useFormik({

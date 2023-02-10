@@ -22,7 +22,7 @@ const OceanBalance = () => {
   useEffect(() => {
     dispatch(getOfficeCashboxAsync());
     dispatch(getCompanyCashboxAsync());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="ocean-balance">

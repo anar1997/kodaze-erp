@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { IoArrowBack } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { postHoldingCompanyAsync } from "../../../../redux/slices/Financeİnstallment/Transfer/holdingCompanySlice";
 import { getCompanyAsync } from "../../../../redux/slices/humanResourcesSlices/companySlice";
 import Error from "../../../Error";
@@ -11,11 +11,11 @@ import "./style.css";
 import validations from "./validation";
 
 const TransferedCompany = () => {
-  const [amountErrorMessage, setAmountErrorMessage] = useState(null);
+  // const [amountErrorMessage, setAmountErrorMessage] = useState(null);
   const dispatch = useDispatch();
   // const location = useLocation();
   // const {employee} = location.state;
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   let company = useSelector((state) => state.company.data);
 
   let error = useSelector((state) => state.holdingCompany.error);

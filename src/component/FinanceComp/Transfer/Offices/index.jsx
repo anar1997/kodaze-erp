@@ -19,7 +19,6 @@ const Offices = () => {
   let data = useSelector((state) => state.offices.data);
   let totalPage = useSelector((state)=>state.offices.totalPage)
   let limitPage = useSelector((state)=>state.offices.pageLimit)
-  let company = useSelector((state) => state.company.data);
   let office = useSelector((state) => state.office.data);
 
   const formik = useFormik({

@@ -3,10 +3,22 @@ import React, { useState } from "react";
 import PageArea from "../../Area";
 import PageHeader from "../../Header";
 import { Col, DatePicker, Row } from "antd";
+import { useFormik } from "formik";
 
 const WarehouseHistory = () => {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
+
+  const formik = useFormik({
+    initialValues: {
+      dateGte: "",
+      dateLte: "",
+    },
+    onSubmit: (values) => {
+      values.dateGte = startDate;
+      values.dateLte = endDate;
+    },
+  });
 
   return (
     <div>
@@ -77,13 +89,12 @@ const WarehouseHistory = () => {
                 <th>Qeyd</th>
               </tr>
             </thead>
-            <tbody>
-
-            </tbody>
+            <tbody></tbody>
           </table>
         </Col>
         <Col span={4}>
-        <div className="finance-search">
+          <form action="" onSubmit={formik.handleSubmit}>
+            <div className="finance-search">
               <h3>Ətraflı Axtar</h3>
               <input
                 type="text"
@@ -97,7 +108,7 @@ const WarehouseHistory = () => {
                 placeholder="Məhsul adı axtar"
                 name="product"
               />
-               <input
+              <input
                 type="text"
                 className="stok-name"
                 placeholder="Telefon"
@@ -151,7 +162,7 @@ const WarehouseHistory = () => {
                 placeholder="Əməliyyat növü"
               >
                 <option value="" disabled hidden>
-                Əməliyyat növü
+                  Əməliyyat növü
                 </option>
                 {/* {office.map((v, i) => (
                   <option key={"office" + v.id} value={v.id}>
@@ -183,6 +194,7 @@ const WarehouseHistory = () => {
                 <button className="delete-button">Təmizlə</button>
               </div>
             </div>
+          </form>
         </Col>
       </Row>
     </div>
