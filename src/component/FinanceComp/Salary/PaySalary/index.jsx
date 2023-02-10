@@ -20,7 +20,7 @@ const PaySalary = () => {
     },
     onSubmit: (values) => {
       let salaryViews = []
-      employee.map((v, i)=>{
+      employee.forEach((v, i)=>{
         salaryViews.push(v.id)
       })
       values.salary_view = salaryViews;
