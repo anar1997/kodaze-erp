@@ -43,7 +43,8 @@ const AdvanceAdd = () => {
     },
     // validationSchema: validations,
     onSubmit: (values) => {
-      employee.map((v, i) => {
+      values.employee_id = employee
+      employee.forEach((v, i) => {
         if (startDate === null) {
           setDateErrorMessage("Tarix mütləq daxil edilməlidir!");
         } else {
