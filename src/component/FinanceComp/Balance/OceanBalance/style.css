@@ -8,13 +8,13 @@
     border-radius: 15px;
     cursor: pointer;
     width: 650px !important;
-    height: 600px !important;
+    height: auto !important;
     margin-left: 250px !important;
     margin-top: 150px !important;
     margin-bottom: 40px !important;
 }
 
-.ocean-balance p{
+.header-p{
     font-weight: bolder;
     font-size: 25px;
     text-align: center;
@@ -43,3 +43,51 @@
     padding: 5px !important;
   }
 
+  .total-p{
+    font-weight: bolder;
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px !important;
+  }
+
+
+  .ocean-balance-button{
+    margin-top: 70px !important;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ocean-balance-button-1{
+    background-color: #98B0C7;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 40px;
+    width: 105px;
+    height: 40px;
+    border: none;
+    padding-top: 8px !important;
+    margin-right: 15px !important;
+    display: inline-block;
+}
+
+.ocean-balance-button-1:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.ocean-balance-button-2{
+    background-color: #21D25C;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 40px;
+    width: 105px;
+    height: 40px;
+    border: none;
+    padding-top: 7px !important;
+    padding-bottom: 8px !important;
+    margin-right: 20px !important;
+    display: inline-block;
+}

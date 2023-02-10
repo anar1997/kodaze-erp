@@ -1,0 +1,41 @@
+.worker-proqram-parametr{
+    width: 70%;
+}
+
+.worker-first label{
+    font-size: 15px;
+}
+
+.worker-left-header{
+    width: 280px !important;
+    margin-left: 50px !important;
+}
+
+.worker-second-col{
+    margin-top: 100px !important;
+}
+
+.worker-second-col label{
+    font-size: 15px !important;
+}
+
+.worker-user-password{
+    margin-right: 20px !important;
+}
+
+.worker-proqram-parametr textarea{
+    margin-top: 30px !important;
+  }
+
+  .check-product label{
+    margin-left: 25px !important;
+  }
+
+  .check-product input{
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+    transform: scale(2);
+    padding: 10px;
+  }

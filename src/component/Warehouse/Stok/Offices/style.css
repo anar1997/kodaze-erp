@@ -1,0 +1,81 @@
+.offices-stok{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 649px !important;
+    height: 808px !important;
+    margin-left: 250px !important;
+    margin-top: 150px !important;
+    margin-bottom: 40px !important;
+}
+
+.offices-stok-parametr-2{
+    display: flex;
+    justify-content: space-between;
+    width: 360px !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px !important;
+}
+
+.offices-stok-parametr-2 label{
+    font-weight: bold;
+}
+
+.offices-stok-select-2{
+    width: 252px !important;
+    border: none;
+    border-bottom: 2px solid #e6e6e6;
+}
+
+.offices-stok-parametr{
+    display: flex !important;
+    justify-content: space-between;
+    margin-left: 65px !important;
+    width: 445px !important;
+    margin-bottom: 20px !important;
+}
+
+
+.offices-stok-parametr label{
+    font-weight: bold;
+}
+
+.stok-number-add-icon{
+    display: flex;
+    /* width: 60px !important; */
+}
+
+.stok-number-input{
+    width: 35px !important;
+    height: 20px !important;
+    margin-left: 20px !important;
+}
+
+.stok-add-icon{
+    font-size: 20px !important;
+    margin-left: 10px !important;
+}
+
+.stok-note-div{
+    display: flex;
+    justify-content: space-between;
+    width: 360px !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px !important;
+}
+
+.stok-note-div label{
+    font-weight: bold;
+}
+
+.stok-note-div textarea{
+    width: 252px !important;
+    height: 150px !important;
+}

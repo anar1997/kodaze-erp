@@ -15,6 +15,7 @@ import ReactSelect from "react-select";
 import * as yup from "yup";
 import Success from "../../Success";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 const HolidayAdd = () => {
   let [selectedOption, setSelectedOption] = useState([]);
@@ -22,9 +23,7 @@ const HolidayAdd = () => {
   const personOnDutyRef = useRef(null);
 
   const validations = yup.object().shape({
-    holiday_date: yup
-      .array()
-      .required("Tarix mütləq daxil edilməlidir!"),
+    holiday_date: yup.array().required("Tarix mütləq daxil edilməlidir!"),
     holding: yup.boolean(),
     office_id: yup.number().when("holding", (holding, schema) => {
       return holding === true
@@ -76,8 +75,7 @@ const HolidayAdd = () => {
       formik.resetForm();
       console.log(personOnDutyRef);
       holdingRef.current.checked = false;
-      personOnDutyRef.current.clearValue()
-
+      personOnDutyRef.current.clearValue();
     },
   });
 
@@ -92,7 +90,9 @@ const HolidayAdd = () => {
       {error && <Error message={error} />}
       {successMessage && <Success message={successMessage} />}
       <div className="holiday-add">
-        <IoArrowBack className="holiday-arrow" />
+        <Link to={".."}>
+          <IoArrowBack className="holiday-arrow" />
+        </Link>
         <h2 className="holiday-h2">Tətil əlavə et</h2>
 
         <div className="app">

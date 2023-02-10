@@ -22,7 +22,7 @@ export const holdingCashboxSlice = createSlice({
         [getHoldingCashboxAsync.fulfilled]: (state, action)=>{
             state.isLoading = false
             console.log(action.payload.results);
-            state.data = action.payload.results[0].data
+            state.data = action.payload.results
         },
         [getHoldingCashboxAsync]: (state, action)=>{
             console.log('xeta cixdi');

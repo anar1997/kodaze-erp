@@ -27,6 +27,12 @@ import regionSlice from "./slices/humanResourcesSlices/regionSlice";
 import userSlice from "./slices/humanResourcesSlices/userSlice";
 import workGraphicSlice from "./slices/humanResourcesSlices/workGraphicSlice";
 import loginSlice from "./slices/loginSlice";
+import categorySlice  from "./slices/Warehouse/categorySlice";
+import holdingWarehouseSlice from "./slices/Warehouse/holdingWarehouseSlice";
+import stokSlice from "./slices/Warehouse/stokSlice";
+import unitOfMeasureSlice  from "./slices/Warehouse/unitOfMeasureSlice";
+import warehouseSlice from "./slices/Warehouse/warehouseSlice";
+import wareRequestsSlice from "./slices/Warehouse/wareRequestsSlice";
 
 
 export default configureStore({
@@ -59,5 +65,11 @@ export default configureStore({
         holdingCashbox: holdingCashboxSlice,
         companyCashbox: companyCashboxSlice,
         officeCashbox: officeCashboxSlice,
+        warehouse: warehouseSlice,
+        holdingWarehouse: holdingWarehouseSlice,
+        stok: stokSlice,
+        wareRequests: wareRequestsSlice,
+        unitOfMeasure: unitOfMeasureSlice,
+        category: categorySlice,
     }
 })

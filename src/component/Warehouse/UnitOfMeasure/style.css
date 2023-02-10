@@ -1,0 +1,103 @@
+.unit-measure {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 474px !important;
+  height: 660px !important;
+  margin-left: 250px !important;
+  margin-top: 150px !important;
+  margin-bottom: 40px !important;
+}
+
+.header{
+    display: flex;
+}
+
+.header p{
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 20px !important;
+    color: #707070;
+    margin-top: 5px !important;
+}
+
+.measure-add{
+    background-color: #24619a;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 40px;
+  width: 178px;
+  height: 40px;
+  border: none;
+  padding-top: 8px !important;
+  margin-left: 78px !important;
+  margin-top: 15px !important;
+  display: inline-block;
+}
+
+.measure-add:hover {
+    color: white;
+    cursor: pointer;
+  }
+
+  .measure-table {
+    border: 1px solid #e0e0e0;
+    border-collapse: collapse;
+    max-width: 300px !important;
+    margin-left: 40px !important;
+    margin-top: 50px !important;
+  }
+  
+  .measure-table th{
+      border: 1px solid #E0E0E0;
+      border-collapse: collapse;
+      padding: 5px !important;
+      text-align: left;
+    }
+    
+    tbody{
+      flex-direction: row;
+    }
+    
+    
+    .measure-table td{
+      border: 1px solid #E0E0E0;
+      border-collapse: collapse;
+      padding: 5px !important;
+    }
+  
+    .measure-cell{
+      width: 270px !important;
+      height: 40px !important;
+      
+    }
+  
+    .measure-cell-2{
+      width: 110px !important;
+    }
+
+    .sharp{
+      margin-left: 200px !important;
+      margin-top: -20px !important;
+    }
+
+    .pencil-sharp{
+      font-size: 20px !important;
+      margin-bottom: 3px !important;
+    }
+
+    .close-sharp{
+      color: red;
+      font-size: 26px !important;
+      margin-left: 5px !important;
+    }
+
+
+    

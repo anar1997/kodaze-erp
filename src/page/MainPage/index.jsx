@@ -47,6 +47,20 @@ import TransferedCompany from "../../component/FinanceComp/Transfer/TransferedCo
 import TransferedOffice from "../../component/FinanceComp/Transfer/TransferedOffice";
 import TransferedOffices from "../../component/FinanceComp/Transfer/TransferedOffices";
 import OceanBalance from "../../component/FinanceComp/Balance/OceanBalance";
+import HoldingWarehouse from "../../component/Warehouse/HoldingWarehouse";
+import Stok from "../../component/Warehouse/Stok";
+import WarehouseRequests from "../../component/Warehouse/WarehouseRequests";
+import WarehouseHistory from "../../component/Warehouse/WarehouseHistory";
+import ProductAdd from "../../component/Warehouse/HoldingWarehouse/ProductAdd";
+import UnitOfMeasure from "../../component/Warehouse/UnitOfMeasure";
+import AddMeasure from "../../component/Warehouse/UnitOfMeasure/AddMeasure";
+import Category from "../../component/Warehouse/Category";
+import AddCategory from "../../component/Warehouse/Category/AddCategory";
+import Utilization from "../../component/Warehouse/HoldingWarehouse/Utilization";
+import HoldingOfisStok from "../../component/Warehouse/Stok/HoldingOfis";
+import OfficesStok from "../../component/Warehouse/Stok/Offices";
+import OfisHoldingStok from "../../component/Warehouse/Stok/OfisHolding";
+import SendWarehouseRequests from "../../component/Warehouse/WarehouseRequests/SendRequests";
 const { Content, Sider } = Layout;
 
 const Main = () => {
@@ -262,7 +276,33 @@ const Main = () => {
                 <Route path="service" element={<Service />} />
                 <Route path="statistics" element={<Statistics />} />
                 <Route path="tasks" element={<Tasks />} />
-                <Route path="warehouse" element={<Warehouse />} />
+                <Route path="warehouse" element={<Outlet />}>
+                  <Route path="" element={<Warehouse/>}/>
+                  <Route path="holding-warehouse" element={<Outlet/>}>
+                    <Route path="" element={<HoldingWarehouse/>}/> 
+                    <Route path="product-add" element={<ProductAdd/>}/> 
+                    <Route path="utilization" element={<Utilization/>}/>
+                  </Route>
+                  <Route path="stok" element={<Outlet/>}>
+                    <Route path="" element={<Stok/>}/>
+                    <Route path="holding-ofis" element={<HoldingOfisStok/>}/>
+                    <Route path="offices" element={<OfficesStok/>}/>
+                    <Route path="ofis-holding" element={<OfisHoldingStok/>}/>
+                  </Route>
+                  <Route path="warehouse-requests" element={<Outlet/>}>
+                    <Route path="" element={<WarehouseRequests/>}/>
+                    <Route path="send-requests" element={<SendWarehouseRequests/>}/>
+                  </Route>
+                  <Route path="warehouse-history" element={<WarehouseHistory/>}/>
+                  <Route path="product/unit-of-measure" element={<Outlet/>}>
+                    <Route path="" element={<UnitOfMeasure/>}/>
+                    <Route path="add-to-measure" element={<AddMeasure/>}/>
+                  </Route>
+                  <Route path="product/categories" element={<Outlet/>}>
+                    <Route path="" element={<Category/>}/>
+                    <Route path="add-category" element={<AddCategory/>}/>
+                  </Route>
+                </Route>
                 <Route path="login" element={<LoginPage />} />
               </Routes>
               {/* </BrowserRouter> */}

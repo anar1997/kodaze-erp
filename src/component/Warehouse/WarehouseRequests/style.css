@@ -1,0 +1,75 @@
+.requests-table {
+    border: 1px solid #e0e0e0;
+    border-collapse: collapse;
+    max-width: 800px !important;
+    margin-left: 40px !important;
+    margin-top: 50px !important;
+  }
+  
+  .requests-table th {
+    border: 1px solid #e0e0e0;
+    border-collapse: collapse;
+    padding: 5px !important;
+  }
+  
+  .requests-table td {
+    border: 1px solid #e0e0e0;
+    border-collapse: collapse;
+    padding: 5px !important;
+  }
+  
+  .requests-cell {
+    width: 140px !important;
+    height: 40px !important;
+  }
+  
+  .requests-cell-2 {
+    width: 110px !important;
+  }
+
+  .requests-status{
+    width: 140px !important;
+  }
+  
+
+.sent-requests{
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    margin-top: 15px !important;
+    background-size: 20px;
+    border: none;
+    border-bottom: 1px solid #b4b4b4;  
+  }
+  
+  .sent-requests:focus{
+    outline: none;
+  }
+  
+  .sent-requests::placeholder{
+    color: #cccccc;
+    font-weight: lighter;
+  }
+
+  .requests-company{
+    width: 100px !important;
+  }
+
+  .requests-office{
+    width: 100px !important;
+  }
+
+  .requests-date{
+    width: 120px !important;
+  }
+
+  .execution-date{
+    width: 120px !important;
+  }
+
+  .requests-note{
+    width: 70px !important;
+  }
+
+  .requests-sender{
+    width: 170px !important;
+  }

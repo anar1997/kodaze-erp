@@ -1,0 +1,12 @@
+.category-parametr {
+    width: 380px !important;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px !important;
+    margin-left: 150px !important;
+  }
+  
+  .category-parametr label {
+    font-weight: bold;
+    font-size: 15px;
+  }

@@ -21,7 +21,7 @@ export const officeCashboxSlice = createSlice({
         },
         [getOfficeCashboxAsync.fulfilled]: (state, action)=>{
             state.isLoading = false
-            state.data = action.payload.results[0].data
+            state.data = action.payload.results
         },
         [getOfficeCashboxAsync.rejected]: (state, action)=>{
             console.log('xeta cixdi');

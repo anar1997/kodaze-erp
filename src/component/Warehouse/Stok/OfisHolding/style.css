@@ -1,0 +1,10 @@
+.utilization-parametr-3{
+        width: 410px !important;
+        display: flex !important;
+        justify-content: space-between;
+        margin-left: 90px !important;
+    }
+
+    .utilization-parametr-3 label{
+        font-weight: bold;
+    }

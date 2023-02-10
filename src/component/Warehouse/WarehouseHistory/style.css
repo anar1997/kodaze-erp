@@ -1,0 +1,32 @@
+.history-table {
+    border: 1px solid #e0e0e0;
+    border-collapse: collapse;
+    max-width: 1000px !important;
+    margin-left: 40px !important;
+    margin-top: 50px !important;
+  }
+  
+  .history-table th{
+      border: 1px solid #E0E0E0;
+      border-collapse: collapse;
+      padding: 5px !important;
+      text-align: left;
+    }
+    
+    
+    
+    .history-table td{
+      border: 1px solid #E0E0E0;
+      border-collapse: collapse;
+      padding: 5px !important;
+    }
+  
+    .history-cell{
+      width: 270px !important;
+      height: 40px !important;
+      
+    }
+  
+    .history-cell-2{
+      width: 110px !important;
+    }

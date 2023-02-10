@@ -1,0 +1,92 @@
+.stok-button {
+  margin-top: 30px !important;
+  margin-left: 50px !important;
+}
+
+.stok-link-1 {
+  background-color: #24619a;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 40px;
+  width: 211px;
+  height: 40px;
+  border: none;
+  padding-top: 8px !important;
+  margin-right: 20px !important;
+  display: inline-block;
+}
+
+.stok-link-1:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.stok-link-2 {
+  background-color: #24619a;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 40px;
+  width: 183px;
+  height: 40px;
+  border: none;
+  padding-top: 8px !important;
+  margin-right: 20px !important;
+  display: inline-block;
+}
+
+.stok-link-2:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.stok-table {
+  border: 1px solid #e0e0e0;
+  border-collapse: collapse;
+  max-width: 580px !important;
+  margin-left: 40px !important;
+  margin-top: 50px !important;
+}
+
+.stok-table th {
+  border: 1px solid #e0e0e0;
+  border-collapse: collapse;
+  padding: 5px !important;
+}
+
+.stok-table td {
+  border: 1px solid #e0e0e0;
+  border-collapse: collapse;
+  padding: 5px !important;
+}
+
+.stok-cell {
+  width: 140px !important;
+  height: 40px !important;
+}
+
+.stok-cell-2 {
+  width: 110px !important;
+}
+
+.stok-date {
+  width: 90px !important;
+}
+.stok-name {
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+  background-size: 20px;
+  border: none;
+  border-bottom: 1px solid #b4b4b4;
+  margin-top: 8px !important;
+}
+
+.stok-name:focus {
+  outline: none;
+}
+
+.stok-name::placeholder {
+  color: #cccccc;
+  font-weight: lighter;
+}

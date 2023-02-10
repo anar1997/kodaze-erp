@@ -41,7 +41,9 @@ const TransferedCompany = () => {
     <form action="" onSubmit={formik.handleSubmit}>
       {error && <Error message={error} />}
       <div className="transfer-company">
-        <IoArrowBack className="transfer-arrow" />
+      <Link to={".."}>
+          <IoArrowBack className="transfer-arrow" />
+        </Link>
         <div className="transfer-blank">
           <div className="transfer-company-parametr">
             <label htmlFor="">Göndərən şirkət</label>

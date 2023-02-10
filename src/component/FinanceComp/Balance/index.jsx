@@ -8,17 +8,17 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getHoldingCashboxAsync } from "../../../redux/slices/Financeİnstallment/holdingCashboxSlice";
 import { getCompanyCashboxAsync } from "../../../redux/slices/Financeİnstallment/companyCashboxSlice";
+import AllianceCard from "./AllianceCard";
 
 const Balance = () => {
-  let company = useSelector((state) => state.company.data);
   let holdingCashbox = useSelector((state) => state.holdingCashbox.data);
   let companyCashbox = useSelector((state) => state.companyCashbox.data);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  useEffect(()=>{
-    dispatch(getHoldingCashboxAsync())
-    dispatch(getCompanyCashboxAsync())
-  },[dispatch])
+  useEffect(() => {
+    dispatch(getHoldingCashboxAsync());
+    dispatch(getCompanyCashboxAsync());
+  }, [dispatch]);
 
   return (
     <div className="balance-div">
@@ -66,24 +66,17 @@ const Balance = () => {
         ]}
       />
       <div className="balance-div">
-        <div className="card-1">
-          <CashBoxCard
-            name={holdingCashbox.holding ? holdingCashbox.holding.name : ""}
-            totalBalance={holdingCashbox.balance}
-          />
-        </div>
+        <Row className="card-1">
+          {holdingCashbox.map((v, i) => (
+            <Col key={"holding-cashbox"+v.id}>
+              <AllianceCard
+                name={v.holding ? v.holding.name : ""}
+                totalBalance={v.balance}
+              />
+            </Col>
+          ))}
+        </Row>
         <Row className="balance-row">
-          {/* <Col span={8}>
-            <CashBoxCard 
-            name={companyCashbox.company ? companyCashbox.company.name : ""}
-            />
-          </Col>
-          <Col span={8}>
-            <CashBoxCard />
-          </Col>
-          <Col span={8}>
-            <CashBoxCard />
-          </Col> */}
           {companyCashbox.map((v, i) => (
             <Col key={"company-cashbox" + v.id} span={8}>
               <CashBoxCard

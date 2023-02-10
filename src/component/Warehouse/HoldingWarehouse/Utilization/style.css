@@ -1,0 +1,115 @@
+.utilization{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 660px !important;
+    height: 626px !important;
+    margin-left: 250px !important;
+    margin-top: 150px !important;
+    margin-bottom: 40px !important;
+}
+
+.uti-header{
+    display: flex;
+}
+
+.uti-header p{
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 20px !important;
+    color: black;
+    margin-top: 5px !important;
+}
+
+.utilization-div{
+    width: 490px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.utilization-select {
+    border: none;
+    border-bottom: 2px solid #e6e6e6;
+    width: 320px;
+    margin-bottom: 20px !important;
+  }
+  
+  .utilization-select:focus {
+    outline: none;
+  }
+
+  .utilization-parametr{
+    display: flex !important;
+    margin-left: 20px !important;
+  }
+
+  .note-parametr{
+    max-width: 430px !important;
+    margin-top: 20px !important;
+    display: flex; 
+    justify-content: space-between;
+    margin-left: 20px !important;
+  }
+
+  .utilization-button{
+    margin-top: 110px !important;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.utilization-button-1{
+    background-color: #98B0C7;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 40px;
+    width: 105px;
+    height: 40px;
+    border: none;
+    padding-top: 8px !important;
+    margin-right: 15px !important;
+    display: inline-block;
+}
+
+.utilization-button-1:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.utilization-button-2{
+    background-color: #21D25C;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 40px;
+    width: 105px;
+    height: 40px;
+    border: none;
+    padding-top: 7px !important;
+    padding-bottom: 8px !important;
+    display: inline-block;
+}
+
+.number-input{
+    width: 35px !important;
+    height: 20px !important;
+}
+
+.add-icon{
+    font-size: 20px !important;
+    margin-left: 10px !important;
+}
+
+.number-add-icon{
+    display: flex;
+    /* width: 60px !important; */
+    margin-left: 30px !important;
+}
+  
+

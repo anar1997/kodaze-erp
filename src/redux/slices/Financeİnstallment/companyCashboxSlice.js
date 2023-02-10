@@ -22,7 +22,7 @@ export const companyCashboxSlice = createSlice({
         [getCompanyCashboxAsync.fulfilled]: (state, action)=>{
             state.isLoading = false
             console.log(action.payload.results);
-            state.data = action.payload.results[0].data
+            state.data = action.payload.results
         },
         [getCompanyCashboxAsync.rejected]: (state, action)=>{
             console.log('xeta cixdi');

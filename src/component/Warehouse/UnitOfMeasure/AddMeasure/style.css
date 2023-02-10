@@ -1,0 +1,47 @@
+.add-measure{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 660px !important;
+    height: 440px !important;
+    margin-left: 250px !important;
+    margin-top: 150px !important;
+    margin-bottom: 40px !important;
+}
+
+.add-measure p{
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 20px !important;
+    color: black;
+    margin-top: 5px !important;
+}
+
+.add-measure-parametr {
+    width: 320px !important;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px !important;
+    margin-left: 150px !important;
+  }
+  
+  .add-measure label {
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .add-measure-select {
+    border: none;
+    border-bottom: 2px solid #e6e6e6;
+    width: 220px;
+  }
+  
+  .add-measure-select:focus {
+    outline: none;
+  }

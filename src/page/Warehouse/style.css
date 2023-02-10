@@ -29,6 +29,72 @@
     width: 110px !important;
   }
 
-  .ware-check{
-    
+  .warehouse-search{
+    background-color: #ffffff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 200px !important;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    float: right; 
+  }
+
+  .warehouse-search h3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px !important;
+  }
+  
+  .warehouse-name{
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    background-size: 20px;
+    border: none;
+    border-bottom: 1px solid #b4b4b4;  
+  }
+  
+  .warehouse-name:focus{
+    outline: none;
+  }
+  
+  .warehouse-name::placeholder{
+    color: #cccccc;
+    font-weight: lighter;
+  }
+
+  .warehouse-select{
+    border: none;
+    border-bottom: 1px solid #b4b4b4;  
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    background-size: 20px;
+    margin-top: 15px !important;
+  }
+  
+  .warehouse-select:focus{
+    outline: none;
+  }
+  
+  .warehouse-select::placeholder{
+    color: #cccccc;
+    font-weight: 100 !important;
+  }
+  
+  .warehouse-delete{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px !important;
+    margin-top: 20px !important;
+  }
+  
+  .search-button{
+    width: 70px !important;
+    text-align: center;
+    border-radius: 50px;
+    border: none;
+    background-color: #24619a;
+    color: #ffffff;
+    padding-top: 7px !important;
+    padding-bottom: 7px !important;
+    margin-right: 10px !important;
   }

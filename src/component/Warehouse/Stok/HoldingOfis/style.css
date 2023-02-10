@@ -1,0 +1,37 @@
+.holding-ofis-stok{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 660px !important;
+    height: 586px !important;
+    margin-left: 250px !important;
+    margin-top: 150px !important;
+    margin-bottom: 40px !important;
+}
+
+.utilization-parametr-2{
+    width: 410px !important;
+    display: flex !important;
+    justify-content: space-between;
+    margin-left: 20px !important;
+}
+
+.utilization-parametr-2 label{
+    font-weight: bold;
+}
+
+.utilization-select-2{
+    border: none;
+    border-bottom: 2px solid #e6e6e6;
+    width: 270px;
+    margin-bottom: 20px !important;
+}
+
+.utilization-select-2:focus {
+    outline: none;
+  }
